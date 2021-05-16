@@ -2,7 +2,6 @@
 深圳大学本科 课程资源共享
 
 <div align="center">
-    <a href="https://www.cyc2018.xyz"> <img src="https://badgen.net/badge/CyC/%E5%9C%A8%E7%BA%BF%E9%98%85%E8%AF%BB?icon=sourcegraph&color=4ab8a1"></a>
     <a href="https://github.com/Alex-Shen1121/SZU_Learning_Resource"> <img src="https://badgen.net/github/stars/Alex-Shen1121/SZU_Learning_Resource?icon=github&color=4ab8a1"></a>
     <a href="https://github.com/Alex-Shen1121/SZU_Learning_Resource"> <img src="https://badgen.net/github/forks/Alex-Shen1121/SZU_Learning_Resource?icon=github&color=4ab8a1"></a>
     <!-- <a href="assets/download.md"> <img src="https://badgen.net/badge/OvO/%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD?icon=telegram&color=4ab8a1"></a> -->

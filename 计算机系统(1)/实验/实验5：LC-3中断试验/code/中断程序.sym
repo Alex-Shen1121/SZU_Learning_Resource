@@ -1,0 +1,16 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	BREAK                   2034
+//	DDR                     2033
+//	DSR                     2032
+//	KBDR                    2031
+//	KBSR                    2030
+//	LOOP                    2014
+//	LOOP1                   200B
+//	LOOP3                   2019
+//	LOOP4                   201C
+//	LOOP5                   201A
+//	NEXT1                   2017
+//	NEXT2                   2025
+//	NEXT3                   2023
+//	STRING                  2035

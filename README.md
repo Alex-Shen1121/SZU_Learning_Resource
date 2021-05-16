@@ -6,6 +6,9 @@
     <!-- <a href="assets/download.md"> <img src="https://badgen.net/badge/OvO/%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD?icon=telegram&color=4ab8a1"></a> -->
     <!-- <a href="assets/download.md"> <img src="https://badgen.net/badge/%e5%85%ac%e4%bc%97%e5%8f%b7/CyC2018?icon=rss&color=4ab8a1"></a> -->
 </div>
+个人CSDN主页：[Alex_SCY的博客](https://blog.csdn.net/pigpigpig64?spm=1001.2014.3001.5343)
+
+不论对您是否有帮助，欢迎star与fork本仓库，你的star是我更新的动力！
 
 ## 前言
 

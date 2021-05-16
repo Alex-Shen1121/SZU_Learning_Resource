@@ -22,9 +22,9 @@
 ## 目录
 
 #### 计算机与软件学院
-| 计算机系统（1） | 计算机系统（2） | Web开发与人机交互 | 面向对象程序设计 | 面向对象程序设计（荣誉） |
-| :---: | :----: | :---: | :----: | :----: |
-| [:pencil2:](#pencil2-算法) | [:computer:](#computer-操作系统) | [:cloud:](#cloud-网络) | [:art:](#art-面向对象) | [:floppy_disk:](#floppy_disk-数据库) |
+| 计算机系统（1） | 计算机系统（2） | Web开发与人机交互 | 面向对象程序设计 |
+| :---: | :----: | :---: | :----: |
+| [:computer:](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F(1)) | [:computer:](#computer-操作系统) | [:cloud:](#cloud-网络) | [:art:](#art-面向对象) |
 
 
 ## 贡献

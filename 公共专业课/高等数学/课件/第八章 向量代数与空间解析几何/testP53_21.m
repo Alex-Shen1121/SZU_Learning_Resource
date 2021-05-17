@@ -1,0 +1,14 @@
+theta=linspace(0,2.*pi,20);
+t=linspace(0,5,20);
+[theta1,t1]=meshgrid(theta,t);
+x=t1.*sin(theta1);
+y=t1.*cos(theta1);
+z=t1;
+figure(1),surf(x,y,z),hold on;
+u=linspace(-3,3,20);
+v=linspace(-2,2,20);
+[uu,vv]=meshgrid(u,v);
+z=uu;
+y=vv;
+x=z.^2./2;
+surf(x,y,z),hold off;

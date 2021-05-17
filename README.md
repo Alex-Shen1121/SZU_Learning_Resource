@@ -24,10 +24,17 @@
 
 ## 目录
 
+#### 公共专业课
+
+|                           军事理论                           |           高等数学           | 线性代数 | 概率论与数理统计 |
+| :----------------------------------------------------------: | :--------------------------: | :------: | :--------------: |
+| [:bomb:](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/公共专业课/军事理论) | [:heavy_multiplication_x:](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E5%85%AC%E5%85%B1%E4%B8%93%E4%B8%9A%E8%AF%BE/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6) | [:x:](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E5%85%AC%E5%85%B1%E4%B8%93%E4%B8%9A%E8%AF%BE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0)      |   [:100:]()          |
+
 #### 计算机与软件学院
-| 计算机系统（1） | 计算机系统（2） | Web开发与人机交互 | 面向对象程序设计 |
+
+| 计算机系统（1） | 计算机导论 | Web开发与人机交互 | 程序设计基础 |
 | :---: | :----: | :---: | :----: |
-| [:computer:](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F(1)) | [:computer:](#computer-操作系统) | [:cloud:](#cloud-网络) | [:art:](#art-面向对象) |
+| [:computer:](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F(1)) | [:speech_balloon:](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/计算机与软件学院/计算机导论U_Learning_Resource/计算机与软件学院/计算机导论) | [:cloud:](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/计算机与软件学院/Web开发及人机交互导论) | [:art:](#art-面向对象) |
 
 
 ## 贡献

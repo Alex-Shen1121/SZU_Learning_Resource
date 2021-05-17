@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>突出显示</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{
+            background-color: #000;
+        }
+        div{
+            width: 680px;
+            margin:20px auto 0;
+            border: 1px solid #fff;
+        }
+        ul{
+            overflow: hidden;
+            padding:20px 0 0 20px;
+        }
+        ul li{
+            width: 200px;
+            height: 186px;
+            float: left;
+            list-style: none;
+            margin:0 20px 20px 0;
+        }
+        ul li img{
+            cursor: pointer;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var $lis = $('ul li');
+            $lis.mouseover(function(){
+                //stop(true) 用于清除动画排队带来的影响
+                $(this).siblings().stop(true).fadeTo(500,0.5);
+            }).mouseout(function(){
+                $lis.stop(true).fadeTo(500,1);
+            }).click(function(){
+                $(this).children().stop(true).slideUp().slideDown();
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><img src="images/29/01.jpg" width="200" height="186" alt=""></li>
+            <li><img src="images/29/02.jpg" width="200" height="186" alt=""></li>
+            <li><img src="images/29/03.jpg" width="200" height="186" alt=""></li>
+            <li><img src="images/29/04.jpg" width="200" height="186" alt=""></li>
+            <li><img src="images/29/05.jpg" width="200" height="186" alt=""></li>
+            <li><img src="images/29/06.jpg" width="200" height="186" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

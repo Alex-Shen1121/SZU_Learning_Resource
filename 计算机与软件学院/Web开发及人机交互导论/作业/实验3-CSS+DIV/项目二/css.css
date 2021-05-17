@@ -1,0 +1,60 @@
+body{
+	font:20px tahoma;
+	margin: 0px;
+	text-align: center;
+	background-color: #10fbff;
+}
+p{
+	margin: 0px auto;
+}
+#webpage{
+	width: 100%;
+}
+#head{
+	width: 80%;
+	margin: 0 auto;
+	height: 100px;
+	background: #0ca2ff;
+}
+#mainbody{
+	width: 80%;
+	height: 500px;
+	margin: 8px auto;
+	background: #caafff;
+}
+#sidebar{
+	background: #efef00;
+	width: 15%;
+	margin: 30px 0px 50px 20px;
+	height: 400px;
+	text-align: left;
+	float: left;
+	clear: left;
+	overflow: hidden;
+}
+#main{
+	background: #6affbc;
+	width: 80%;
+	height: 400px;	
+	margin: 30px 20px 50px 0px;
+	text-align: left;
+	float: right;
+	clear: right;
+	overflow: hidden;
+}
+#footer{
+	width: 80%;
+	margin: 0 auto;
+	height: 50px;
+	background: #ffaa00;
+}
+legend {	font-style: italic;	color: #666666;
+}
+input[type="text"] {	width: 120px;	border: 1px solid #d6d6d6;	padding: 2px;		outline: none;}
+input[type="text"]:focus,input[type="text"]:hover {	background-color: #d0e2f0;	border: 1px solid #999999;
+}input[type="submit"] {	border: 1px solid #006633;	background-color: #009966;	color: #ffffff;	border-radius: 5px;	padding: 5px;	margin-top: 10px;
+}input[type="submit"]:hover {	border: 1px solid #006633;	background-color: #00CC33;	color: #ffffff;	cursor: pointer;
+}
+.title {	float: left;	width: 160px;	clear: left;
+}.submit {	width: 310px;	text-align: right;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS四种样式表的引用</title>
+		<style type="text/css">
+			body{background-color: #66ffff;font-size: 18px;}
+			div{
+				border: 1px dotted #000000;
+			}
+			.div1{
+				width: 100%;
+				height: 100px;
+				background-color: #99cc33;
+				}
+			.p1{
+					color: blue;
+					font-size: 32px;
+			}
+			.div4{
+				width: 100%;
+				background-color: #0000FF;
+				height: 250px;
+			}
+			.p4{
+				border: 1px solid #000000;
+				width: 400px;
+				height: 200px;
+				overflow: scroll;
+				float: right;
+				background-color: #0ffbff;
+			}
+		</style>
+		<link type="text/css" rel="stylesheet" href="layout_link.css"/>
+	</head>
+	<body>
+		<div class="div1">
+			<p class="p1">这是内嵌样式表应用</p>
+		</div>
+		
+		<div style="background-color: #ffff33;width: 100%;height: 100px;">
+			<p>这是内部样式表应用</p>
+			<p style="color: blue;">这是内部样式表p1</p>
+		</div>
+		
+		<div class="div3">
+			<p class="p3">导入样式表应用</p>
+		</div>
+		
+		<div class="div4">
+			<img src="picture of a dog.jpg" alt="dog" width="300" height="200"/ align="left" style="margin: 20px 10px 10px 10px;">
+			<p class="p4" >狗<br/>狗（拉丁文Canis lupus familiaris）属于脊索动物门、脊椎动物亚门、哺乳纲、真兽亚纲、食肉目、裂脚亚目、犬科动物。中文亦称“犬”，狗分布于世界各地。狗与马、牛、羊、猪、鸡并称“六畜”。有科学家认为狗是由早期人类从灰狼驯化而来，驯养时间在4万年前~1.5万年前。被称为“人类最忠实的朋友”，是饲养率最高的宠物，其寿命大约在12~18年 [1]  。在中国文化中，狗属于十二生肖之一，在十二生肖中的第11位。</p>
+		</div>
+	</body>
+</html>

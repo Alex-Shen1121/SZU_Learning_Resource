@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>消息对话框使用</title>
+		<style type="text/css">
+			fieldset{
+				
+				background:#99ff99;
+				border: 8px ridge #3333c;
+				width: 350px;
+				height: 150px;
+			}
+			legend{
+				color: #0000cc;
+			}
+			form{
+				position: relative;
+				top: 50px;
+				margin: 20px;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<fieldset>
+			<legend>
+				<form method="get" action="" >
+					你的名字：<input type="text" id="name1" name="" maxlength="10" readonly="readonly" />
+					<br />
+					<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="button" value="输入姓名" onclick="inputName();" />
+					<input type="reset" name="clear" value="清空" />
+				</form>
+			</legend>
+		</fieldset>
+		<script>
+			function inputName(){
+				var name=prompt("输入你的姓名","您好");
+				if(name!=null){
+					alert("你的姓名是："+name);
+					document.getElementById("name1").value=name;
+				}
+				else{
+					alert("请输入姓名！");
+				}
+			}
+		</script>
+		<script>
+			var keyword = document.getElementById("text_").value;
+			localSearch.setSearchCompleteCallback(function(searchResult) {
+				var poi = searchResult.getPoi(0);
+				alert(poi.point.lng + "   " + poi.point.lat);
+				map.centerAndZoom(poi.point, 20);
+			});
+		</script>
+		
+	</body>
+</html>

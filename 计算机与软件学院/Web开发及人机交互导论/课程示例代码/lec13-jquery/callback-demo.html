@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="lib/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").hide(1000,function(){
+                    alert("段落现在被隐藏了");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<button type="button">隐藏</button>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+</body>
+</html>

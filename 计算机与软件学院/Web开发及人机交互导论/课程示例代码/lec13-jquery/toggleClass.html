@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="lib/jquery-1.8.2.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("h1,h2,p").toggleClass("blue");
+            });
+        });
+    </script>
+    <style type="text/css">
+        .blue
+        {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+
+<h1>标题 1</h1>
+<h2>标题 2</h2>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+<button>切换 CSS 类</button>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单留言板设计</title>
+		<style type="text/css">
+			#div1 {
+				background-color: #f2f9fd;
+				color: #66ffff;
+				width: 100%;
+				height: 40px;
+			}
+
+			#div2 {
+				background-color: #f2f9fd;
+				color: #66ffff;
+				width: 100%;
+				height: 300px;
+				margin-top: 3px;
+			}
+
+			#div3 {
+				background-color: #f2f9fd;
+				width: 100%;
+				margin-top: 3px;
+			}
+
+			.td1 {
+				line-height: 22px;
+				font-size: 18px;
+				color: #339966;
+				width: 100px;
+				font-weight: bold;
+			}
+
+			.td2 {
+				line-height: 42px;
+				font-size: 18px;
+				color: #339966;
+				width: 100px;
+				font-weight: bold;
+			}
+
+			.td3 {
+				line-height: 42px;
+				font-size: 25px;
+				color: #ff0000;
+				width: 100px;
+				font-weight: bold;
+			}
+
+			.td4 {
+				line-height: 22px;
+				font-size: 15px;
+				color: #ff0000;
+				width: 100px;
+				font-weight: normal;
+			}
+
+			.bt1 {
+				font-size: 30px;
+				font-family: 黑体;
+				font-weight: bold;
+				text-align: left;
+				width: 500px;
+				color: #0033cc;
+			}
+
+			.bt2 {
+				font-size: 22px;
+				font-family: 黑体;
+				font-weight: bold;
+				text-align: left;
+				width: 200px;
+				color: #0033cc;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<table align="center">
+				<tr>
+					<th class="bt1">留言板</th>
+					<th class="bt2">科技工作者建言</th>
+				</tr>
+			</table>
+		</div>
+		<div id="div2">
+			<table align="center" border="1" bordercolor="white" width="650px" height="300px" cellspacing="0px" cellpadding="0px">
+				<tr>
+					<td colspan="2" class="td3">发表留言</td>
+				</tr>
+				<tr>
+					<td class="td1">姓名：</td>
+					<td><input type="text" name="name" size="10"></td>
+				</tr>
+				<tr>
+					<td class="td1">电子邮件：</td>
+					<td><input type="text" name="emailaddress" size="50"></td>
+				</tr>
+				<tr>
+					<td class="td1">分类：</td>
+					<td class="td4">
+						科技工作者建言
+						<input type="radio" name="notbm" />不保密
+						<input type="radio" name="bm" />保密
+						留言类型：
+						<select name="leixing">
+							<option value="0" selected></option>
+							<option value="1">投诉</option>
+							<option value="2">咨询</option>
+							<option value="3">建议</option>
+							<option value="4">反馈</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="td2">留言：</td>
+					<td><textarea name="" rows="6" cols="50">在此留言</textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-indent: 2em; color: #5555ff;">注：如果您的留言不便公开，请选择“保密”选项，提交后可凭系统反馈给您的留言编号、查询密码和您的姓名查询回复</td>
+				</tr>
+				<tr>
+					<form name="form1" method="post" action="">
+						<td style="position: relative;left: 170px;"><input type="submit" value="提交" style="float: right;"></td>
+						<td style="position: relative;right: 280px;"><input type="reset" value="清空" style="float: right;"></td>
+					</form>
+				</tr>
+			</table>
+			<div id="div3">
+				<table align="center">
+					<tr>
+						<td style="color: #000000;font-size: 15px;">·请遵守国家有关法律、法规、尊重网上道德，承担一切因你的行为而直接或间接引起的法律责任<br>·本网站拥有管理笔名和留言的一切权力</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

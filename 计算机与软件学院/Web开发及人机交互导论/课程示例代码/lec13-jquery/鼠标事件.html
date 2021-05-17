@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul{
+            width: 500px;
+            margin:20px auto 0;
+        }
+        ul li{
+            list-style: none;
+            height:40px;
+            line-height: 40px;
+            border:1px solid #000;
+            text-align: center;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            //单击事件
+            $('ul li').eq(0).click(function(){
+                alert('有个SB点我了，貌似就点了一下呢！！');
+            });
+            // 双击事件
+            $('ul li:eq(1)').dblclick(function(){
+                alert('有个SB点我了，貌似就点了两下呢！！');
+            });
+            // 鼠标按下
+            $('ul li').eq(2).mousedown(function(){
+                alert('有个SB把我按下了！！');
+            });
+            // 鼠标松开
+            $('ul li').eq(3).mouseup(function(){
+                alert('有个SB在我上面松开了！！');
+            });
+            // 鼠标移上
+            $('ul li').eq(4).mouseover(function(){
+                alert('有个SB移到我上面了！！');
+            });
+            // 鼠标离开
+            $('ul li').eq(5).mouseout(function(){
+                alert('有个SB从我上面移开了！！');
+            });
+            // 鼠标移动
+            $('ul li').eq(6).mousemove(function(){
+                console.log('有个SB在我上面来回动！！');
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>单机事件</li>
+        <li>双击事件</li>
+        <li>鼠标按下</li>
+        <li>鼠标松开</li>
+        <li>鼠标移上</li>
+        <li>鼠标离开</li>
+        <li>鼠标移动</li>
+    </ul>
+</body>
+</html>

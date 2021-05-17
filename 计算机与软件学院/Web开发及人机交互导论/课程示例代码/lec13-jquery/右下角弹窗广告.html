@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>右下角弹窗广告</title>
+    <style>
+        body{height:1000px;}
+        div{
+            width: 278px;
+            height: 188px;
+            position: fixed;
+            right:0;
+            bottom:0;
+            display: none;
+        }
+        div span{
+            position:absolute;
+            right:0;
+            top:0;
+            font-size:25px;
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var $ad = $('div');
+            var vshow =  function(){ 
+                $ad.slideToggle(800).fadeOut(500).fadeIn(500);
+            }
+            vshow();
+            $ad.find('span').click(function(){
+               $ad.slideToggle(800);
+               setTimeout(function(){
+                   vshow();
+               },2000);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <img src="images/25.jpg" alt="">
+        <span>&times;</span>
+    </div>
+</body>
+</html>

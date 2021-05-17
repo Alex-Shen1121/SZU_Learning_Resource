@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件信息</title>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            var video = $('video')[0];
+            $(document).keydown(function(e){
+                console.log(e.which);
+                /*
+                    空格键                       32
+                        ↑                        38
+                        ↓                        40
+                        ←                        37
+                        →                        39
+
+                    当按下Ctrl键的时候，事件对象.ctrlKey为true，否则为false;
+                    当按下Shift键的时候，事件对象.shiftKey为true，否则为false;
+                    当按下Alt键的时候，事件对象.altKey为true，否则为false;
+                */
+
+                //如果按下空格键就播放视频，此处要注意将jquery对象转成原生js对象
+                if(e.which == 32){
+                    if(video.paused){
+                        video.play();
+                    }else{
+                        video.pause();
+                    }
+                    return false;
+                }else if(e.which == 39){ //如果按下→键就前进
+                    video.playbackRate += 0.1;
+                }else if(e.which == 37){
+                    if(video.playbackRate > 0.1){
+                        video.playbackRate -= 0.1;
+                    }
+                }else if(e.which==38 && e.ctrlKey){     //Ctrl+↑
+                    // alert(video.currentTime);
+                    if(video.currentTime + 5 > video.duration){
+                        video.currentTime = video.duration;
+                    }else{
+                        video.currentTime += 5;
+                    }
+                    
+                }else if(e.which == 40 && e.ctrlKey){    //Ctrl+↓
+                    if(video.currentTime < 5){
+                        video.currentTime = 0;
+                    }else{
+                        video.currentTime -= 5;
+                    }
+                }
+                
+            });
+        })
+    </script>
+</head>
+<body>
+    <video controls>
+        <source src="figure/video.mp4" type="video/mp4">
+        <source src="figure/video.webm" type="video/webm">
+    </video>
+</body>
+</html>

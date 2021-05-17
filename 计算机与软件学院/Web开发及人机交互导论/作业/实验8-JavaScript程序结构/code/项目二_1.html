@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>计算∑N！</title>
+		<style type="text/css">
+			fieldset {
+				margin: 20px auto;
+				background: #ffffff;
+				color: #000000;
+				width: 400px;
+				padding: 0 40px;
+				border: 2px outset #009966;
+			}
+
+			legend {
+				font-size: 28px;
+				color: #000000;
+				font-weight: bolder;
+			}
+		</style>
+		<script type="text/javascript">
+			function compute_factorial(n) {
+				var sum = 1;
+				var i = 1;
+				for (i = 1; i <= n; i++) {
+					sum *= i;
+				}
+				return sum;
+			}
+
+			function func(N) {
+				var sum = 0,
+					temp = 0;
+				if (N == 0) {
+					document.write("0!=1</br>阶乘的和=1");
+					return;
+				} else {
+					for (var i = 1; i <= N; i++) {
+						temp = compute_factorial(i);
+						document.write(i + "!=" + temp + "</br>");
+						sum += temp;
+					}
+					document.write("阶乘的和=" + sum);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<fieldset>
+			<legend>计算1！+2！+3！+ ... +N!</legend>
+			<script type="text/javascript">
+				var num = 1;
+				var N = prompt("请输入整数N", 1);
+				func(N);
+			</script>
+		</fieldset>
+	</body>
+</html>

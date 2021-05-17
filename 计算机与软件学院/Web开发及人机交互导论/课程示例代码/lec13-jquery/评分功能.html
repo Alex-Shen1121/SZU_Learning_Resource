@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>评分功能</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        div{
+            width: 135px;
+            margin:10px auto;
+        }
+        ul{
+            overflow: hidden;
+            list-style: none;
+        }
+        ul li{
+            width: 27px;
+            height: 28px;
+            background: url("images/21.gif");
+            float: left;
+        }
+        ul li.special{
+            background-position: left bottom;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var $lis = $('ul li');
+            //点击时表示评分将左边标为金色，右边标为灰色并显示用户的评分
+            $lis.click(function(){
+                $(this).prevAll().addBack().addClass('special');
+                $(this).nextAll().removeClass('special');
+                $('p span').html($(this).index()+1);
+            }).mouseover(function(){ //鼠标经过时将左边的显示为金色右边显示为灰色
+                $(this).prevAll().addBack().addClass('special');
+                $(this).nextAll().removeClass('special');
+            }).mouseout(function(){ //鼠标移开时恢复之前的状态
+                var cur = +($('p span').html());
+               $lis.filter(':gt('+(cur-1)+')').removeClass('special');
+                $lis.filter(':lt('+cur+')').addClass('special');
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="special"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <p>您的评分为：<span>1</span></p>
+    </div>
+</body>
+</html>

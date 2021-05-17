@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个性网站导航</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul,ol li{
+            list-style: none;
+        }
+        ol{
+            position:fixed;
+            left:100px;
+            top:0;
+            width: 100px;
+            height: 500px;
+            overflow: hidden;
+            border:1px solid #000;
+        }
+        ol li{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: #ccc;
+            font-size: 30px;
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+            cursor: pointer;
+        }
+        ol li.active{
+            background-color: yellow;
+        }
+        html{ height:100%;}
+        body{ height:100%;}
+        ul{ height:100%;}
+        ul li{
+            height:100%;
+            width: 100%;
+            background:#ccc; 
+            font-weight:bold; 
+            font-size:30px;
+        }
+        ul li:first-child{
+            background-color: pink;
+        }
+        ul li:nth-child(2){
+            background-color: green;
+        }
+        ul li:nth-child(3){
+            background-color: purple;
+        }
+        ul li:nth-child(4){
+            background-color: orange;
+        }
+        ul li:nth-child(5){
+            background-color: blue;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $('ol li').click(function(){
+                //alert($(this).index());
+                $(this).addClass('active').siblings().removeClass('active');
+                $('html,body').animate({scrollTop:($(this).index())*$(window).height()},500);
+            });
+        })
+    </script>
+</head>
+<body>
+    <ol>
+        <li class="active">首页</li>
+        <li>关注</li>
+        <li>动态</li>
+        <li>风格</li>
+        <li>作品</li>
+    </ol>
+    <ul>
+        <li>首页</li>
+        <li>关注</li>
+        <li>动态</li>
+        <li>风格</li>
+        <li>作品</li>
+    </ul>
+</body>
+</html>

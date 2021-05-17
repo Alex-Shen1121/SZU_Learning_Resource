@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="lib/jquery-1.8.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#w3s").attr({
+                    "href" : "http://csse.szu.edu.cn/cn/index",
+                    "title" : "计算机与软件学园"
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+<p><a href="http://www.szu.edu.cn" id="w3s">www.szu.edu.cn</a></p>
+<button>改变 href 和 title 值</button>
+<p>请把鼠标指针移动到链接上，或者点击该链接，来查看已经改变的 href 值和已经设置的 title 值。</p>
+</body>
+</html>

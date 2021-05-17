@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>排他实现</title>
+    <script>
+        // window.onload = function(){
+        //     var imgs = document.getElementsByTagName('img');
+        //     for(var i = 0;i < imgs.length;i++){
+        //         imgs[i].onclick = function(){
+        //             for(var i = 0;i < imgs.length;i++){
+        //                 imgs[i].style.border = 'none';
+        //             }
+        //             this.style.border = '5px solid red';
+        //         }
+        //     }
+        // }
+    </script>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $('div img').click(function(){
+                // $(this).css('border','5px solid red').siblings().css('border','none');
+                //end() 表示回到最近一个被破坏性操作之前的状态
+                $(this).siblings().css('border','none').end().css('border','5px solid red');
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <img src="images/19/1.jpg" alt="">
+        <img src="images/19/2.jpg" alt="">
+        <img src="images/19/3.jpg" alt="">
+        <img src="images/19/4.jpg" alt="">
+        <img src="images/19/5.jpg" alt="">
+    </div>
+</body>
+</html>

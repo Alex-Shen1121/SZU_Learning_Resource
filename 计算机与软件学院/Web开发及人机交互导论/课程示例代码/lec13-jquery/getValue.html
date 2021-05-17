@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="lib/jquery-1.8.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                alert("Value: " + $("#test").val());
+            });
+        });
+    </script>
+</head>
+
+<body>
+<p>姓名：<input type="text" id="test" value="米老鼠"></p>
+<button>显示值</button>
+</body>
+
+</html>

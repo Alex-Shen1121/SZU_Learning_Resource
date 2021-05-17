@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 9: APIs - jQuery UI Tabs</title>
+    <link rel="stylesheet" href="css/c09.css" />
+    <link rel="stylesheet" href="css/pepper-grinder/jquery-ui-1.10.3.custom.min.css" />
+  </head>
+  <body>
+    <header><h1>THE MAKER BUS</h1></header>
+    <h2>Prizes</h2>
+    <div class="third img"><img src="img/toys1.jpg" alt="Circuit boards" /></div>
+    <div class="two-thirds">
+      <div id="prizes">
+        <ul>
+          <li><a href="#tab-1">1st Prize</a></li>
+          <li><a href="#tab-2">2nd Prize</a></li>
+          <li><a href="#tab-3">3rd Prize</a></li>
+        </ul>
+        <div id="tab-1">
+          <p>First prize is the DJI Phantom - a small, all-in-one quadcopter designed for aerial photography enthusiasts. It comes fully configured and ready to fly. Both compact and stylish, the highly integrated design means that it's easy to carry wherever you go, ready at a moment's notice.</p>
+        </div>
+        <div id="tab-2">
+          <p>Second prize is the Arduino Robot - the first official Arduino on wheels! The robot has two processors, one on each of its two boards. The Motor Board controls the motors, and the Control Board reads sensors and decides how to operate. Each of the boards is a full Arduino board programmable using the Arduino IDE.</p>
+        </div>
+        <div id="tab-3">
+          <p>Third prize is a collection of books for the motivated maker. Includes best-selling titles <i>Makers</i> by Cory Doctorow, <i>The Maker Movement Manifesto: Rules for Innovation in the New World of Crafters, Hackers, and Tinkerers</i> by Mark Hatch, and <i>Invent To Learn: Making, Tinkering, and Engineering in the Classroom</i> by Sylvia Libow Martinez.</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $('#prizes').tabs();
+      });
+    </script>
+  </body>
+</html>

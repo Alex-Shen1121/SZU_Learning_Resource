@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 13: Form Enhancement and Validation - Validation</title>
+    <link rel="stylesheet" href="css/c13.css" />
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.10.3.custom.min.css" />
+  </head>
+  <body>
+  <div class="container">
+    <form method="post" action="/register" name="register">
+      <div class="one-third column">
+        <img src="img/logo.png" alt="logo" id="logo" />
+        <h2 class="welcome">Become a Member</h2>
+        <p class="intro">Welcome to the Super 8 Film Society. We are a group of film enthusiasts who meet up each month to watch old movies on film, in our own private cinema. We also create our own short film each year, which is entered into film competitions worldwide.</p>
+      </div>
+      <div class="one-third column">
+        <h2>Settings</h2>
+          <div class="name">
+            <label for="name" class="required">Name:</label>
+            <input type="text" placeholder="Enter your name" name="name" id="name" required title="Please enter your name">
+          </div>
+          <div class="email">
+            <label for="email" class="required">Email:</label>
+            <input type="email" placeholder="you@example.com" name="email" id="email" required>
+          </div>
+          <div class="password">
+            <label for="password" class="required">Password:</label>
+            <input type="password" name="password" id="password" required>
+          </div>
+          <div class="password">
+            <label for="conf-password" class="required">Confirm password:</label>
+            <input type="password" name="conf-password" id="conf-password" required>
+          </div>
+        </fieldset>
+      </div>
+      <div class="one-third column">
+        <h2>Profile</h2>
+          <div class="birthday">
+            <label for="birthday" class="required">Birthday:</label>
+            <input type="date" name="birthday" id="birthday" placeholder="yyyy-mm-dd" required>
+            <div id="consent-container" class="hide">
+              <label for="parents-consent">You need a parent's permission to join.
+                Tick here if your child can join:</label>
+              <input type="checkbox" name="parents-consent" id="parents-consent">
+            </div>
+          </div>
+          <div class="bio">
+            <label for="bio">Short Bio (max 140 characters):</label>
+            <textarea name="bio" id="bio" rows="5" cols="30"></textarea>
+            <span id="bio-count" class="hide">140</span>
+          </div>
+          <div class="register"><input type="submit" value="Register"></div>
+      </div>
+    </form>
+  </div><!-- .container -->
+  <script src="js/jquery-1.9.1.js"></script>
+  <script src="js/jquery-ui-1.10.3.custom.js"></script>
+  <script src="js/utilities.js"></script>
+  <script src="js/placeholder-polyfill.js"></script>
+  <script src="js/password-signup.js"></script>
+  <script src="js/birthday.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/bio.js"></script>
+  </body>
+</html>

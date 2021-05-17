@@ -1,0 +1,159 @@
+/* The Maker Bus Stylesheet */
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background-color: #fff;
+  color: #666;
+  font-family: 'Open Sans', arial, sans-serif;
+  width: 960px;
+  margin: 0 auto 0 auto;}
+
+h1 {
+  font-weight: normal;
+  margin: 1em 0 0 0;
+  float: left;
+  width: 225px;
+  height: 90px;
+  background-image: url('../img/maker-logo.png');
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;}
+
+h2 {
+  font-size: 2.4em;
+  margin: 0 0 1em 0;
+  color: #000;
+  line-height: 1em;
+  letter-spacing: -.06em;
+  padding: 0;}
+
+header {
+  display: block;
+  height: 140px;
+  border-bottom: 5px solid #000;
+  margin-bottom: 30px;}
+
+nav {
+  font-family: oswald, arial, sans-serif;
+  font-size: 1.4em;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1em 0 1em 0;
+  border-bottom: 2px solid #333;
+  margin: 0 6em 0 6em;}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 0 1.5em 0 1.5em;
+  display: inline-block;}
+
+nav a:hover, nav a.current {
+  color: #d71a00;}
+
+/* Structure */
+#content {
+  clear: both;
+  margin-top: 10px;}
+.third {
+  width: 320px;
+  float: left;}
+.two-thirds {
+  width: 640px;
+  float: left;}
+
+p {margin-top: 0;}
+
+
+
+/* Forms */
+form {
+  margin: 0;
+  font-size: 160%;}
+
+.third form {width: 90%;}
+
+label {
+  float: left; 
+  width: 6em;
+  margin-top: 10px;}
+
+input, textarea {
+  border-radius: 3px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #efefef;
+  font-size: 100%;
+  width: 100%;
+  padding: 0.3em 0.5em 0.3em 0.5em;}
+
+textarea {
+  height: 5em;
+  line-height: 1.4em;}
+
+input[type=submit] {
+  background-color: #1fb684;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  width: auto;
+  clear:left;
+  float: right;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  margin: 0.5em 0 0 0;}
+
+input[type=submit]:hover {
+  background-color: #000;
+  cursor: pointer;}
+
+#loc {padding-top: 2em;}
+#container {line-height: 1.6em; margin: 2em 6em 3em 6em;}
+#price-range .ui-slider-handle {z-index: 1;}
+
+
+
+/* Basic AngularJS example */
+.welcome {width: 90%;}
+.postcard {
+  font-family: arial;
+  width: 640px;
+  height: 420px;
+  background-image: url(../img/postcard.png);
+  float: left;}
+p, .postcard div {overflow: hidden;}
+.postcard div {
+  width: 290px; 
+  height: 1.4em;
+  margin: 210px 0 0 290px;
+  font-family: oswald, sans-serif;
+  font-weight: bold;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  color: #1eb685;}
+.postcard p {
+  width: 290px;
+  font-size: 1.3em;
+  height: 5em;
+  overflow: auto;
+  font-family: oswald, sans-serif;
+  color: #1eb685;
+  margin: 10px 0 10px 290px;}
+
+
+/* Angular external data */
+table {margin-top: 3em;}
+#timetable table { margin-top: 0; }
+th {
+  text-align: left;
+  text-transform: uppercase;
+  border-bottom: 1px solid #999;
+  font-size: 120%;}
+td {
+  font-size: 100%;
+  padding: 0 1em 1em 0;
+  vertical-align: top;}
+table.ng-scope th:nth-child(2) {
+  min-width: 11em;}

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse hover Demo</title>
+    <script type="text/javascript" src="lib/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#test").hide();
+            });
+        });
+        $(document).ready(function(){
+            $("#p1").hover(
+                    function(){
+                        alert("你进入了 p1!");
+                    },
+                    function(){
+                        alert("拜拜! 现在你离开了 p1!");
+                    }
+            );
+        });
+    </script>
+
+</head>
+
+<body>
+<p id="p1">Mouse Hover Event Demo</p>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 13: Form Enhancement and Validation - Changing the type of a Form Input</title>
+    <link rel="stylesheet" href="css/c13.css" />
+  </head>
+  <body>
+    <div class="container login">
+      <form name="login" action="/login/" method="post">
+        <div class="one-third column">
+          <img src="img/logo.png" alt="logo" id="logo" />
+        </div><!-- .one-third -->
+        <div class="two-thirds column" id="main">
+          <fieldset>
+            <legend>Login</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" />
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" /><br>
+            <input type="checkbox" id="showPwd">
+            <label for="showPwd">show password</label>
+            <input type="submit" value="Login" />
+          </fieldset>
+        </div><!-- .two-thirds -->
+      </form>
+    </div><!-- .container -->
+    <script src="js/utilities.js"></script>
+    <script src="js/input-type.js"></script>
+  </body>
+</html>

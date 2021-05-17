@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI事件</title>
+    <style>
+        *{margin:0;padding:0;}
+        section{
+            margin:40px;
+			padding: 20px;
+			border: 1px dashed #333;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            //卸载事件，很难捕捉到
+            $(window).unload(function(){
+                alert('不要离开我啊！！');
+            });
+            //窗口滚动事件
+            $(window).scroll(function(){
+                alert('来吧！跟我一起摇滚吧！！'+$(this).scrollTop());
+            });
+            //窗口重置事件
+            $(window).resize(function(){
+                alert('跟着我的脚步，变化吧！！');
+            });
+            //文本框或文本域选中事件
+            $('input,textarea').select(function(e){
+                //alert('MD，那个家伙老是把我'+e.target.tagName+'选中了');
+                var start = e.target.selectionStart; //获取选择的开始位置
+                var end = e.target.selectionEnd; //获取选择的结束位置
+                alert($(this).val().slice(start,end));  //截取选中的字符串
+            });
+        })
+    </script>
+</head>
+<body>
+    <section>
+        一. unload事件<br>
+        具体来说，当发生以下情况时，会发出 unload 事件：<br><br>
+
+        1. 点击某个离开页面的<a href="http://www.baidu.com">链接</a><br> 
+        2. 在地址栏中键入了新的 URL <br>
+        3. 使用前进或后退按钮 <br>
+        4. 关闭浏览器 <br>
+        5. 重新加载页面 
+    </section>
+    <section>
+        二. scroll事件<br><br>
+        当用户滚动指定的元素时，会发生 scroll 事件。<br>
+
+        scroll 事件适用于所有可滚动的元素和 window 对象（浏览器窗口）。
+    </section>
+    <section>
+        三. resize事件<br><br>
+	    当调整浏览器窗口的大小时，发生 resize 事件。
+    </section>
+    <section>
+        四. select事件<br><br>
+        当 textarea 或文本类型的 input 元素中的文本被选择时，会发生 select 事件。<br><br>
+        <input type=""><br><br>
+        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+    </section>
+</body>
+</html>

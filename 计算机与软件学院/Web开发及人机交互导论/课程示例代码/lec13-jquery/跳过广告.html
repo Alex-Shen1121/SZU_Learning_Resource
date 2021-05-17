@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳过广告</title>
+    <style>
+        *{margin:0;padding:0;}
+        span{
+            position:absolute;
+            left:0;
+            top:0;
+            border:1px solid #000;
+            padding:5px;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            //跟随鼠标移动就是当鼠标在文档中移动时将改变元素的横纵坐标
+            $(document).mousemove(function(e){
+                //此处加10是为了解决bug，如果不加移动太快就移动到span上
+                $('span').css({left:e.pageX+10,top:e.pageY+10});
+            });
+        })
+    </script>
+</head>
+<body>
+    <span>跳过广告</span>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝放大镜</title>
+    <style>
+        *{margin:0;padding:0;}
+        .wrapper{
+            width: 670px;
+            margin:50px auto 0;
+            /*overflow: hidden;*/
+        }
+        .wrapper .wrap_con{
+            width: 350px;
+            height: 350px;
+            border:1px solid #000;
+            float: left;
+            margin-right:10px;
+            position: relative;
+        }
+        /*
+            整体的思路为：当放大镜移动的时候让大图作为背景图移动，所以此处有一个等比缩放，而此处正好大图的宽度为700，小图的宽度为350.所以放大镜的宽度为:放大后的宽度 * 小图的宽度 / 大图的宽度即400 * 350 / 700 = 200
+            此处的宽和高时有讲究的，需要满足条件：
+            小图的宽度:大图的宽度 = 放大镜的宽度:放大后的宽度
+        */
+        .magnifier{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left:0;
+            top: 0;
+            background: url('images/67/scope.png') repeat;
+            display: none;
+            cursor: move;
+        }
+        .big-img{
+            width: 400px;
+            height: 400px;
+            background: url('images/67/datu.jpg');
+            position: absolute;
+            left:360px;
+            top:0;
+            display: none;
+        }
+        h3{
+            float: left;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            //当鼠标移上时显示放大镜和大图
+            $('.wrap_con').mouseenter(function(){
+                $('.magnifier,.big-img').show();
+                $(this).mousemove(function(e){
+                    var m_left = e.pageX - $(this).offset().left - $('.magnifier').width()/2;
+                    var m_top = e.pageY - $(this).offset().top - $('.magnifier').height()/2;
+                    //边界值判断
+
+                    //判断左右边界
+                    if(m_left < 0){
+                        m_left = 0;
+                    }else if(m_left > $('.wrap_con').width() - $('.magnifier').width()){
+                        m_left = $('.wrap_con').width() - $('.magnifier').width();
+                    }
+                    //判断上下边界
+                    if(m_top < 0){
+                        m_top = 0;
+                    }else if(m_top > $('.wrap_con').height() - $('.magnifier').height()){
+                        m_top = $('.wrap_con').height() - $('.magnifier').height();
+                    }
+
+                    $('.magnifier').css({left:m_left,top:m_top});
+
+                    //处理大图，也就是放大镜放大后的图
+                    /*
+                        整体的思路为：当放大镜移动的时候让大图作为背景图移动，所以此处有一个等比缩放，而此处正好大图的宽度为700，小图的宽度为350.所以放大镜的宽度为:放大后的宽度 * 小图的宽度 / 大图的宽度即400 * 350 / 700 = 200
+                        此处的宽和高时有讲究的，需要满足条件：
+                        小图的宽度:大图的宽度 = 放大镜的left:放大后的left
+                    */
+                    var d_w = 700 * m_left / 350;
+                    var d_h = 700 * m_top / 350;
+                    $('.big-img').css('background-position','-'+d_w+'px -'+d_h+'px');
+                });
+            }).mouseleave(function(){
+                $('.magnifier,.big-img').hide();
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrap_con">
+            <img src="images/67/xiaotu.jpg" alt="">
+            <div class="magnifier"></div>
+            <div class="big-img"></div>
+        </div>
+        <h3>贾玲春晚同款毛衣，穿出女神气质</h3>
+    </div>
+</body>
+</html>

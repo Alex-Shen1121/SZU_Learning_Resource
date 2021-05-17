@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">
+			tr {
+				width: 500px;
+				text-align: center;
+				vertical-align: middle;
+				height: 20px;
+			}
+
+			td {
+				font-weight: bold;
+			}
+
+			.blue {
+				color: blue;
+			}
+
+			.red {
+				color: red;
+			}
+
+			table {
+				border-width: 3px;
+				border-collapse: collapse;
+				border-left-color: pink;
+				border-top-color: pink;
+				border-right-color: green;
+				border-bottom-color: green;
+			}
+		</style>
+		<title>表格应用案例</title>
+	</head>
+	<body>
+
+		<table bordercolor="#000000" border="1" bgcolor="#99ff00" background="tu201203092.jpg" align="center" width="600px"
+		 height="300px" frame="border" rules="all" cellspacing="1" cellpadding="2">
+			<caption>
+				<font face="黑体" size="5" color="#000000">表1第一学期成绩单</font>
+			</caption>
+			<tr align="center" valign="middle" class="blue">
+				<th rowspan="2">序号</th>
+				<th rowspan="2">学号</th>
+				<th rowspan="2">姓名</th>
+				<th colspan="5">第一学期成绩</th>
+			</tr>
+			<tr class="blue">
+				<td>英语</td>
+				<td>高数</td>
+				<td>学科导论</td>
+				<td>就业</td>
+				<td>总分</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1019200101</td>
+				<td>李大宇</td>
+				<td>75</td>
+				<td>76</td>
+				<td>76</td>
+				<td>90</td>
+				<td>395</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>1019200102</td>
+				<td>张子明</td>
+				<td>60</td>
+				<td class="red">45</td>
+				<td>66</td>
+				<td class="red">55</td>
+				<td>303</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>1019200103</td>
+				<td>胡大明</td>
+				<td class="red">55</td>
+				<td>68</td>
+				<td>64</td>
+				<td>80</td>
+				<td>343</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>1019200104</td>
+				<td>王不学</td>
+				<td class="red">34</td>
+				<td>87</td>
+				<td>76</td>
+				<td class="red">45</td>
+				<td>309</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>1019200105</td>
+				<td>徐知道</td>
+				<td>67</td>
+				<td>95</td>
+				<td>66</td>
+				<td>90</td>
+				<td>363</td>
+			</tr>
+			<tr class="blue">
+				<td colspan="3">课程平均分</td>
+				<td class="red">58.2</td>
+				<td>74.5</td>
+				<td>69.6</td>
+				<td>72</td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>

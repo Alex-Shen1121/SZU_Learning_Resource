@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="lib/jquery-1.8.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                alert($("#szu").attr("href"));
+            });
+        });
+    </script>
+</head>
+
+<body>
+<p><a href="http://www.szu.edu.cn" id="szu">www.szu.edu.cn</a></p>
+<button>显示 href 值</button>
+</body>
+
+</html>

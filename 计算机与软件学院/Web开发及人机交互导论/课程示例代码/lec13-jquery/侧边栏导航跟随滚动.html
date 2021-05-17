@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝侧边栏导航跟随滚动</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{
+            height: 4000px;
+            background: #f1f1f1;
+            font-size: 12px;
+        }
+        ul{
+            list-style: none;
+        }
+        p{
+            width:100%;
+			position:fixed;
+			left:0;
+			top:0;
+			text-align: center;
+			background-color: #fff;
+        }
+        div{
+			width:1190px;
+			height:800px;
+			margin:0 auto;
+			color:white;
+			font-size: 100px;
+		}
+        #favorite-box{
+			background-color:#ff4400;
+			margin-top:49px;
+		}
+		#fashion-box{
+			background-color:#ff3779;
+		}
+		#life-box{
+			background-color:#8d7afb;
+		}
+		#special-box{
+			background-color:#bfc413;
+		}
+		#economical-box{
+			background-color:#ad849b;
+		}
+		#guess-box{
+			background-color:#ff4400;
+		}
+
+
+        .scroll-nav{
+            width: 50px;
+            position: absolute;
+            left:50%;
+            top:400px;
+            /*top:100px;*/
+            margin-left:600px;
+            background: #fff;
+        }
+        .scroll-nav li{
+            width: 50px;
+            height: 50px;
+            line-height: 34px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .scroll-nav li a{
+            display: block;
+            width:100%;
+            height:100%;
+            color: #3C3C3C;
+            text-decoration: none;
+        }
+        .scroll-nav span{
+            height: 34px;
+            width: 34px;
+            display: block;
+            margin: 0 auto;
+            padding:8px 0;
+            font-weight: bold;
+            border-top:1px solid #efefef;
+        }
+        .favorite span{
+            border-top:none;
+            line-height: 17px;
+        }
+        .report span,.guess span,.backtop span{
+            line-height: 17px;
+        }
+        .backtop span,.feedback span,.report span{
+            font-weight: normal;
+        }
+        .scroll-nav .hover span,.scroll-nav .click span{
+            border-top:none;
+            color: #fff;
+        }
+        .scroll-nav li a:hover,.backtop.hover{
+            background: #f40;
+            color: #fff;
+        }
+        .favorite,.guess{
+            color: #f40;
+        }
+        .favorite.hover,.favorite.click{
+            background: url('images/aside-nav/haunt.jpg');
+            color: #fff;
+        }
+        .guess.hover,.guess.click{
+            background: url('images/aside-nav/guess.jpg');
+        }
+        .fashion{
+            color: #ff3779;
+        }
+        .fashion.hover,.fashion.click{
+            background: url('images/aside-nav/fashion.jpg');
+        }
+        .life{
+            color: #8d7afb;
+        }
+        .life.hover,.life.click{
+            background: url('images/aside-nav/life.jpg');
+        }
+        .special{
+            color: #cdc413;
+        }
+        .special.hover,.special.click{
+            background: url('images/aside-nav/special.jpg');
+        }
+        .economical{
+            color: #ad849b;
+        }
+        .economical.hover,.economical.click{
+            background: url('images/aside-nav/economical.jpg');
+        }
+        .backtop{
+            display: none;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            //当鼠标悬浮在li上时，有一个闪一下的效果
+            $('.scroll-nav li').mouseenter(function(){
+                // $(this).addClass('hover').siblings().removeClass('hover');
+                //这里当用户点击了一个li时，再次将鼠标放到li上也会有一个闪一下的效果，这不是我们想要的，我们是要当用户点击后鼠标移上时就不闪了，所以这里需要判断
+                if(!$(this).hasClass('click')){
+                    $(this).addClass('hover').css({opacity:0}).animate({opacity:1},500);
+                }
+                
+            }).mouseleave(function(){
+                $(this).removeClass('hover');
+            });
+
+            //当鼠标点击li时,综合到下面的click事件中
+            // $('.scroll-nav li').click(function(){
+            //     $(this).addClass('click').siblings().removeClass('click');
+            // });
+
+            //侧边栏导航吸顶，功能在下面的scroll事件中
+            // var navtop = $('.scroll-nav').position().top;
+            // $(window).scroll(function(){
+            //     //吸顶工作
+            //     if($(window).scrollTop()+49 >= navtop){
+            //         $('.scroll-nav').css({position:'fixed',top:49});
+            //     }else{
+            //         $('.scroll-nav').css({position:'absolute',top:400});
+            //     }
+
+            //     //返回顶部按钮的显示和隐藏
+            //     if($(window).scrollTop() >= $(window).height()){
+            //         $('.backtop').show();
+            //     }else{
+            //         $('.backtop').hide();
+            //     }
+            // });
+
+            /*
+            //点击回到顶部
+            $('.backtop').click(function(){
+                $('html,body').animate({scrollTop:0},500);
+            });
+
+            //点击每一个链接到相应的位置
+            $('.scroll-nav .favorite').click(function(){
+                $('html,body').animate({scrollTop:$('#favorite-box').offset().top - 49},500);
+            });
+
+            $('.scroll-nav .fashion').click(function(){
+                $('html,body').animate({scrollTop:$('#fashion-box').offset().top - 49},500);
+            });
+            */
+            //根据以上数据可以简化如下:
+            var tops = [
+                $('#favorite-box').offset().top - 49,
+                $('#fashion-box').offset().top - 49,
+                $('#life-box').offset().top - 49,
+                $('#special-box').offset().top - 49,
+                $('#economical-box').offset().top - 49,
+                $('#guess-box').offset().top - 49,
+                0
+            ];
+            $('.scroll-nav li').filter(':lt(7)').click(function(){
+                $(this).addClass('click').siblings().removeClass('click');
+                $('html,body').animate({scrollTop:tops[$(this).index()]},500);
+            });
+
+            var navtop = $('.scroll-nav').position().top;
+            /*
+				scrollTop()的范围                        右侧对应的侧边栏导航
+				0~$('.fashion').offset().top-49  tops[1]      我常逛的
+				 ~$('.life').offset().top-49     tops[2]      时尚
+				 ~$('.special').offset().top-49  tops[3]      品质
+				 ~$('.economical').offset().top-49 tops[4]    特色
+				 ~$('.guess').offset().top-49    tops[5]      实惠
+				 ~∞                                           猜你喜欢
+
+		 */
+            $(window).scroll(function(){
+                if($(window).scrollTop() < tops[1]){
+                    $('.scroll-nav li').eq(0).addClass('click').siblings().removeClass('click');
+                }else if($(window).scrollTop() < tops[2]){
+                    $('.scroll-nav li').eq(1).addClass('click').siblings().removeClass('click');
+                }else if($(window).scrollTop() < tops[3]){
+                    $('.scroll-nav li').eq(2).addClass('click').siblings().removeClass('click');
+                }else if($(window).scrollTop() < tops[4]){
+                    $('.scroll-nav li').eq(3).addClass('click').siblings().removeClass('click');
+                }else if($(window).scrollTop() < tops[5]){
+                    $('.scroll-nav li').eq(4).addClass('click').siblings().removeClass('click');
+                }else{
+                    $('.scroll-nav li').eq(5).addClass('click').siblings().removeClass('click');
+                }
+                // var i = 0;
+                // while(i < 6){
+                //     if($(window).scrollTop() < tops[i+1]){
+                //         $('.scroll-nav li').eq(i).addClass('click').siblings().removeClass('click');
+                //     }
+                //     i++;
+                // }
+
+                //吸顶工作
+                if($(window).scrollTop()+49 >= navtop){
+                    $('.scroll-nav').css({position:'fixed',top:49});
+                }else{
+                    $('.scroll-nav').css({position:'absolute',top:400});
+                }
+
+                //返回顶部按钮的显示和隐藏
+                if($(window).scrollTop() >= $(window).height()){
+                    $('.backtop').show();
+                }else{
+                    $('.backtop').hide();
+                }
+            });
+            
+        })
+    </script>
+</head>
+<body>
+    <p><img src="images/aside-nav/search.jpg" alt=""></p>
+    <div id="favorite-box">我常逛的</div>
+    <div id="fashion-box">时尚</div>
+    <div id="life-box">品质</div>
+    <div id="special-box">特色</div>
+    <div id="economical-box">实惠</div>
+    <div id="guess-box">猜你喜欢</div>
+
+    <ul class="scroll-nav">
+        <li class="favorite click"><span>我常<br>逛的</span></li>
+        <li class="fashion"><span>时尚</span></li>
+        <li class="life"><span>品质</span></li>
+        <li class="special"><span>特色</span></li>
+        <li class="economical"><span>实惠</span></li>
+        <li class="guess"><span>猜你<br>喜欢</span></li>
+        <li class="backtop"><span class="icon">&#xe678;<br>顶部</span></li>
+        <li class="feedback"><a href=""><span>反馈</span></a></li>
+        <li class="report"><a href=""><span>暴恐举报</span></a></li>
+    </ul>
+</body>
+</html>

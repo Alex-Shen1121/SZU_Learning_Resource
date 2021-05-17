@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件</title>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            //键盘按下
+            $('input,textarea').keydown(function(){
+                console.log('谁按下了键盘.....keydown');
+            });
+            //键盘抬起
+            $('input,textarea').keyup(function(){
+                console.log('谁抬起了键盘....keyup');
+            });
+
+            //键盘按下
+            $('input,textarea').keypress(function(){
+                console.log('谁按下了键盘.....keypress');
+            }); 
+        })
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text">
+		<br>
+		<br>
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+		<br>
+		<br>
+		<input type="submit" value="提交">
+    </form>
+<br>
+<br>
+keydown：<br><br>
+当键盘被按下时，发生 keydown 事件。
+<br><br><br>
+
+keyup：<br><br>
+当按键被松开时，发生 keyup 事件。
+<br><br><br>
+
+keypress：<br><br>
+当键盘被按下时，发生 keypress 事件。<br><br>
+
+keypress 事件与 keydown 事件类似。当按钮被按下时，会发生该事件。它发生在当前获得焦点的元素上。 不过，与 keydown 事件不同，每插入一个字符，就会发生 keypress 事件。<br><br>
+
+</body>
+</html>

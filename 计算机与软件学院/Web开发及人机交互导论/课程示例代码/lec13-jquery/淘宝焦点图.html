@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝焦点图</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul li,ol li{
+            list-style: none;
+        }
+        img{
+            vertical-align: middle;
+        }
+        .wrapper{
+            width: 490px;
+            height: 170px;
+            padding:10px;
+            margin:50px auto 0;
+            border:1px solid #ccc;
+        }
+        .wrap_img{
+            width: 490px;
+            height: 170px;
+            position: absolute;
+            overflow: hidden;
+        }
+        .wrap_img ul{
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .wrap_img ol{
+            position: absolute;
+            bottom:10px;
+            right:0;
+        }
+        .wrap_img ol li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            background-color: #fff;
+            margin-right:10px;
+            cursor: pointer;
+        }
+        .wrap_img ol li.on{
+            background-color: #ff0;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            var index = 0;
+            var timer = null;
+            $('ol li').mouseenter(function(){
+                index = $(this).index();
+                change();
+            });
+
+            $('.wrap_img').mouseenter(function(){
+                clearInterval(timer);
+            }).mouseleave(function(){
+                play();
+            }).mouseleave();
+
+            function change(){
+                //角标切换
+                $('ol li:eq('+index+')').addClass('on').siblings().removeClass('on');
+                //图片的切换
+                $('ul').stop(true).animate({top:-index * 170},1000);
+            }
+
+            function play(){
+                timer = setInterval(function(){
+                    index++;
+                    if(index > 4){
+                        index = 0;
+                    }
+                    change();
+                },2000);
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrap_img">
+            <ul>
+                <li><img src="images/71/01.jpg" alt=""></li>
+                <li><img src="images/71/02.jpg" alt=""></li>
+                <li><img src="images/71/03.jpg" alt=""></li>
+                <li><img src="images/71/04.jpg" alt=""></li>
+                <li><img src="images/71/05.jpg" alt=""></li>
+            </ul>
+            <ol>
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

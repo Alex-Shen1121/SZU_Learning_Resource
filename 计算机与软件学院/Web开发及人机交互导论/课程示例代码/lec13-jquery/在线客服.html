@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在线客服</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            height:1000px;
+        }
+        div{
+            width: 131px;
+            height: 311px;
+            position: fixed;
+            right:-131px;
+            top:50%;
+            margin-top:-155px;
+        }
+        div span{
+            width:29px;
+            height: 117px;
+            position:absolute;
+            left:-29px;
+            top:97px;
+            cursor: pointer;
+            background: url('images/30/qqL.jpg') no-repeat left top;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var is_hidden = true; //用于判断当前的状态，默认为隐藏状态
+            $('div span').click(function(){
+                if(is_hidden){
+                    $(this).css('background-image','url(images/30/qqLOpen.jpg)').parent().animate({right:0},500);
+                }else{
+                    $(this).css('background-image','url(images/30/qqL.jpg)').parent().animate({right:-131},500);
+                }
+                //当点击时修改状态为相反的状态
+                is_hidden = !is_hidden; 
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <img src="images/30/qq.jpg" alt="">
+        <span></span>
+    </div>
+</body>
+</html>

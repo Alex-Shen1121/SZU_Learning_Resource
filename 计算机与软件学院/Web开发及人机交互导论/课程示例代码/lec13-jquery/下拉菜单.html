@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <style>
+        *{margin:0;padding:0;}
+        div{
+            width: 340px;
+            height: 30px;
+            margin:20px auto 0;
+        }
+        .menu{
+            width: 340px;
+            height: 30px;
+            background: url('images/54/bg.jpg');
+            line-height: 30px;
+        }
+        .menu li{
+            list-style: none;
+            float:left;
+            width: 100px;
+            margin-left: 10px;
+            text-align: center;
+            background: url('images/54/libg.jpg');
+            cursor: pointer;
+            position: relative;
+        }
+        .menu li ul{
+            position: absolute;
+            left:0;
+            top:30px;
+            display: none;
+        }
+        .menu li ul li{
+            margin-left:0;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+
+            /* 此处使用这两个有bug
+            $('.menu>li').mouseover(function(){
+                $(this).children().slideDown();
+            }).mouseout(function(){
+                $(this).children().slideUp();
+            });
+            */
+            /*
+            $('.menu>li').mouseenter(function(){
+                $(this).children().stop(true).slideDown();
+            }).mouseleave(function(){
+                $(this).children().stop(true).slideUp();
+            });
+            */
+
+            /*
+            $('.menu>li').hover(function(){
+                $(this).children().stop(true).slideDown();
+            }).hover(function(){
+                $(this).children().stop(true).slideUp();
+            });
+            */
+
+            $('.menu>li').hover(function(){
+                $(this).children().stop(true).slideToggle();
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <ul class="menu">
+            <li>一级菜单
+                <ul>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                </ul>
+            </li>
+            <li>一级菜单
+                <ul>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                </ul>
+            </li>
+            <li>一级菜单
+                <ul>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

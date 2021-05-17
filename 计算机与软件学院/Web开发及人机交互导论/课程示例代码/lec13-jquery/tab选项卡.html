@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab选项卡</title>
+    <style>
+        *{margin:0;padding:0;}
+        .tab{
+            width: 899px;
+            margin:20px auto;
+            border:1px solid #ccc;
+        }
+        .tab ul{
+            height:40px;
+            line-height: 40px; 
+        }
+        .tab ul li{
+            list-style: none;
+            float: left;
+            width: 224px;
+            height:40px;
+            line-height: 40px;
+            text-align: center;
+            background-color:#c0dcc0;
+            margin-right:1px;
+            cursor: pointer;
+        }
+        .tab ul li.active{
+            background-color:#9baf9b;
+        }
+        .tab ul li:last-child{
+            margin-right:0;
+        }
+        .tab-content div{
+            display: none;
+            height:500px;
+        }
+        .china-news{
+            padding:20px;
+        }
+        fieldset{margin:50px;padding:20px;}
+		input[type='text']:focus{
+			background-color:lightyellow;
+		}
+		input[type='radio']:checked+label{
+			font-weight:bold;
+		}
+		#nextStep:disabled{
+			background-color:#ccc;
+		}
+		#nextStep:enabled{
+			font-weight:bold;
+			font-style:italic;
+		}
+		p:lang(zh-cn){
+			font-family:"微软雅黑"
+		}
+		p:lang(us-en){
+			font-family:Verdana, Geneva, sans-serif
+		}
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $('.tab ul li').mouseover(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.tab-content>div:eq('+$(this).index()+')').css('display','block').siblings().css('display','none');
+            });
+            $('#agree').click(function(){
+                //alert($(this).prop('checked'));
+                $('#nextStep').prop('disabled',!$(this).prop('checked'));
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="tab">
+        <ul>
+            <li class="active">国内新闻</li>
+            <li>国际新闻</li>
+            <li>体育新闻</li>
+            <li>娱乐新闻</li>
+        </ul>
+        <div class="tab-content">
+            <div class="china-news" style="display:block;">
+                <fieldset>
+                    <legend>表单</legend>
+                    姓名：<input type="text"><br><br>
+                    性别：<input type="radio" name="sex" id="male"><label for="male">男</label>
+                        <input type="radio" name="sex" id="female"><label for="female">女</label>
+                        <input type="radio" name="sex" id="secret"><label for="secret">保密</label>
+                        <br><br>
+                    <input type="checkbox" name="" id="agree"><label for="agree">我同意以上协议</label><br><br>
+                    <input type="button" value="上一步">
+                    <input type="button" value="下一步" id="nextStep" disabled>
+                </fieldset>
+            </div>
+            <div class="internatil-news">
+                国际新闻
+            </div>
+            <div class="tiyu-news">
+                体育新闻
+            </div>
+            <div class="yule-news">
+                娱乐新闻
+            </div>
+        </div>
+    </div>
+</body>
+</html>

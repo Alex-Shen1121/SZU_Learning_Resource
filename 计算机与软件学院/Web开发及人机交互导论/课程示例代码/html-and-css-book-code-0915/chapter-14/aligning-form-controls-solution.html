@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aligning Form Controls - Solution</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Verdana, sans-serif;}
+			div {
+				border-bottom: 1px solid #efefef;
+				margin: 10px;
+				padding-bottom: 10px;
+				width: 260px;}
+			.title {
+				float: left;
+				width: 100px;
+				text-align: right;
+				padding-right: 10px;}
+			.radio-buttons label {
+				float: none;}
+			.submit {
+				text-align: right;}
+		</style>
+	</head>
+	<body>
+		<form action="example.php" method="post">
+			<div>
+				<label for="name" class="title">Name:</label>
+				<input type="text" id="name" name="name" />
+			</div>
+			<div>
+				<label for="email" class="title">Email:</label>
+				<input type="email" id="email" name="email" />
+			</div>
+			<div class="radio-buttons">
+				<span class="title">Gender:</span>
+				<input type="radio" name="gender" id="male" value="M" />
+				<label for="male">M</label>
+				<input type="radio" name="gender" id="female" value="F" />
+				<label for="female">F</label><br />
+			</div>
+			<div class="submit">
+				<input type="submit" value="Register" id="submit" />
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度风云榜</title>
+	<style>
+		*{margin:0;padding:0}
+		#fengyunbang{
+			width: 100px;
+			padding:5px;
+			border: 1px solid #000;
+			margin:50px;
+			background-color: #0066ff;
+			color:white;
+		}
+		#fengyunbang li{
+			list-style-type:none;
+			line-height: 24px;
+		}
+		#fengyunbang li.on ul{
+			display: block;
+		}
+		#fengyunbang li.on span{
+			background-image: url('images/40/open.gif');
+		}
+		#fengyunbang ul{
+			margin-left:20px;
+			display:none;
+		}
+		#fengyunbang span{
+			background: url('images/40/close.gif') no-repeat left center;
+			padding-left:20px;
+			cursor:pointer;
+		}
+	</style>
+	<script src="lib/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$('#fengyunbang span').click(function(){
+				$(this).parent().toggleClass('on').siblings().removeClass('on');
+			});
+		})
+	</script>
+</head>
+<body>
+	<ul id="fengyunbang">
+		<li><span>事件</span>
+			<ul>
+				<li>最近</li>
+				<li>上周</li>
+				<li>上月</li>
+			</ul>
+		</li>
+		<li><span>娱乐</span>
+			<ul>
+				<li>游戏</li>
+				<li>电影</li>
+				<li>电视</li>
+			</ul>
+		</li>
+		<li><span>人物</span>
+			<ul>
+				<li>美女</li>
+				<li>帅哥</li>
+				<li>明星</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

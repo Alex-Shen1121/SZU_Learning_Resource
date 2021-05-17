@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gradient</title>
+		<style type="text/css">
+			#gradient {
+				/* fallback color */
+				background-color: #66cccc; 
+				/* fallback image */
+				background-image: url("images/fallback-image.png"); 
+				/* Firefox 3.6+ */
+				background-image: -moz-linear-gradient(#336666, #66cccc);
+				/* Safari 4+, Chrome 1+ */
+				background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#66cccc), to(#336666));
+				/* Safari 5.1+, Chrome 10+ */
+				background-image: -webkit-linear-gradient(#336666, #66cccc); 
+				/* Opera 11.10+ */
+				background-image: -o-linear-gradient(#336666, #66cccc);
+   				height: 150px;
+				width: 300px;}
+		</style>
+	</head>
+	<body>
+		<div id="gradient">
+		</div>
+	</body>
+</html>

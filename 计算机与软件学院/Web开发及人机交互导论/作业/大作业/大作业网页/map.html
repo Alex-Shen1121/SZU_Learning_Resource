@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<title>百度地图导航查询</title>
+		<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=AoyCrqhXHpbJysJ3Hgek5Dl5urom0Zla3jsBPkrGfEiM-kwbuQHlEyc-hB-SWxfKWrFAjJtkdUl-V4CMIis1wYZ08quvCIv27oYmmk3BuXE"
+		 charset="UTF-8"></script>
+		<link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cDovL2xic3l1bi5iYWlkdS5jb20vanNkZW1vL2RlbW8vcmlkaW5ncm91dGUuaHRt" />
+		<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=3mRtpNAy8fG5G1RlUot9z85TECtBLCd9"></script>
+		<style type="text/css">
+			body,
+			html,
+			#container {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				margin: 0;
+				font-family: "微软雅黑";
+				background-color: gainsboro;
+			}
+
+			body {
+				color: #666666;
+				background-color: #f9f8f6;
+				background-image: url("image/dark-wood.jpg");
+				background-position: center;
+				font-family: 黑体;
+				line-height: 1.4em;
+				margin: 0px;
+			}
+
+			.top {
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				padding: 0px;
+				margin: 0px;
+				height: 50px;
+				width: 100%;
+				background-color: gainsboro;
+				z-index: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<p style="float: left;">计算机与软件学院 沈晨玙 2019092121 Web开发及人机交互大作业</p>
+
+			<input style="float: right;position: relative; right: 200px; top: 12px; color: #444444; font-size: 16px;	border-bottom: 2px solid #b2b2b2; background-color: #b9e4e3;"
+			 type="button" value="导航查询" onclick="location.reload();">
+			<a href="主页.html" style="float: right;position: relative; right: 10px;top: 15px;">返回主页面</a>
+		</div>
+		<br /><br />
+		<div id="container"></div>
+		<script type="text/javascript">
+			var name1 = null,
+				name2 = null;
+			alert("请输入你的起点与终点");
+			name1 = prompt("输入你的起点", "深圳大学(粤海校区)");
+			name2 = prompt("输入你的终点", "深圳腾讯滨海大厦");
+			alert("如有需要，请在地图上选择具体出发点、终点")
+			var map = new BMap.Map("container");
+			map.centerAndZoom(new BMap.Point(113.94585, 22.537589), 18);
+			map.enableScrollWheelZoom();
+			var riding = new BMap.RidingRoute(map, {
+				renderOptions: {
+					map: map,
+					autoViewport: true
+				}
+			});
+			riding.search(name1, name2);
+
+
+			var top_left_control = new BMap.ScaleControl({
+				anchor: BMAP_ANCHOR_TOP_LEFT
+			}); // 左上角，添加比例尺
+			var top_left_navigation = new BMap.NavigationControl(); //左上角，添加默认缩放平移控件
+			var top_right_navigation = new BMap.NavigationControl({
+				anchor: BMAP_ANCHOR_TOP_RIGHT,
+				type: BMAP_NAVIGATION_CONTROL_SMALL
+			}); //右上角，仅包含平移和缩放按钮
+			/*缩放控件type有四种类型:
+			BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；BMAP_NAVIGATION_CONTROL_ZOOM：仅包含缩放按钮*/
+			map.addControl(top_left_control);
+			map.addControl(top_left_navigation);
+			map.addControl(top_right_navigation);
+		</script>
+
+	</body>
+</html>

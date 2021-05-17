@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>成绩百分之转化为五级制</title>
+		<style type="text/css">
+			#div1 {
+				background: #006600;
+				color: white;
+				width: 300px;
+				height: 300px;
+				margin: 100px auto;
+				font-size: 24px;
+				border: 8px double #009933;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<script type="text/javascript">
+				document.write("<b>课程成绩评定</b><br /><br />");
+				var result = "";
+				var x = prompt("请输入你的成绩", 0);
+				if (x != null) {
+					document.write("课程成绩为：" + x + "分");
+					if (x >= 90) {
+						result = "优秀";
+						alert("1--成绩等级为" + result);
+					} else if (x < 90 && x >= 80) {
+						result = "良好";
+						alert("2--成绩等级为" + result);
+					} else if (x < 80 && x >= 70) {
+						result = "中等";
+						alert("3--成绩等级为" + result);
+					} else if (x < 70 && x >= 60) {
+						result = "及格";
+						alert("4--成绩等级为" + result);
+					} else if (x < 60) {
+						result = "不及格";
+						alert("5--成绩等级为" + result);
+					}
+					document.write("<br />成绩等级为：" + result);
+				} else {
+					alert("请重新输入成绩！");
+				}
+			</script>
+		</div>
+	</body>
+
+</html>

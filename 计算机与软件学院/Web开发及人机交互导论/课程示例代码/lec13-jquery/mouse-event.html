@@ -1,0 +1,36 @@
+<html>
+<head>
+    <script type="text/javascript" src="lib/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#test").hide();
+            });
+        });
+        $(document).ready(function(){
+            $("#p1").mouseenter(function(){
+                alert('您的鼠标移到了 id="p1" 的元素上!');
+            });
+            $("#p2").mouseleave(function(){
+                alert("再见，您的鼠标离开了该段落。");
+            });
+            $("#p3").mousedown(function(){
+                alert("鼠标在该段落上按下！");
+            });
+            $("#p4").mouseup(function(){
+                alert("鼠标在段落上松开。");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+<p id="p1">Mouse Event:mouseenter Demo</p>
+<p></p>
+<p id="p2">Mouse Event:mouseleave Demo</p>
+<p id="p3">Mouse Event:mousedown Demo</p>
+<p id="p4">Mouse Event:mouseup Demo</p>
+</body>
+
+</html>

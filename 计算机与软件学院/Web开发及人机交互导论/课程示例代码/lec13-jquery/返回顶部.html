@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>返回顶部</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{height:5000px;}
+        p{text-align: center;line-height: 50px;}
+        span{
+            background: url('images/nav.jpg') no-repeat left top;
+            width: 36px;
+            height: 65px;
+            position: fixed;
+            right:35px;
+            bottom:35px;
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop() >= $(this).height()){
+                    $('span').css('display','block');
+                }else{
+                    $('span').css('display','none');
+                }
+            });
+            $('span').click(function(){
+                $('html,body').animate({scrollTop:0},500);
+            });
+        })
+    </script>
+</head>
+<body>
+    <p>请往下滑</p>
+    <span></span>
+</body>
+</html>

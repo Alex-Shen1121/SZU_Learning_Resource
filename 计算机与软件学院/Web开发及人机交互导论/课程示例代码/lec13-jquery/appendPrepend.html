@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="lib/jquery-1.8.2.js"></script>
+    <script>
+        function appendText()
+        {
+            var txt1="<p>Text.</p>";              // 以 HTML 创建新元素
+            var txt2=$("<p></p>").text("Text.");  // 以 jQuery 创建新元素
+            var txt3=document.createElement("p");
+            txt3.innerHTML="Text.";               // 通过 DOM 来创建文本
+            $("body").append(txt1,txt2,txt3);        // 追加新元素
+        }
+    </script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<button onclick="appendText()">追加文本</button>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>全选案例</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="lib/jquery-1.12.4.min.js"></script>
+        <script>
+            $(function(){
+                $('input:eq(0)').click(function(){
+                    $(':checkbox').prop('checked',$(this).is(':checked'));
+                    //$('ul li input').attr('checked','true');
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <p>
+            <input type="checkbox">全选
+            <ul>
+                <li><input type="checkbox">睡觉</li>
+                <li><input type="checkbox">吃饭</li>
+                <li><input type="checkbox">玩</li>
+            </ul>
+        </p>
+    </body>
+</html>

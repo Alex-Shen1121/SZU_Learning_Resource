@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米焦点图</title>
+    <style>
+        *{margin:0;padding:0;}
+        img{vertical-align: middle;}
+        .scroll{
+            width:992px;
+            height: 420px;
+            margin:100px auto 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .scroll ol{
+            position: absolute;
+            right:10px;
+            bottom:10px;
+            z-index: 2;
+        }
+        .scroll ol li{
+            float: left;
+            border:1px solid #ccc;
+            width: 30px;
+            height:20px;
+            line-height: 20px;
+            text-align: center;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .scroll ol li.on{
+            background-color:#f60;
+        }
+        ul{
+            position: relative;
+            z-index:1;
+        }
+        ul li{
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        ul li.current{
+            z-index:10;
+        }
+        ul li,ol li{
+            list-style: none;
+        }
+        .scroll span{
+            width: 40px;
+            height: 70px;
+            background: url('images/73/arr.png') no-repeat left top;
+            cursor: pointer;
+            position: absolute;
+            left:0;
+            top:175px;
+            z-index: 3;
+            display: none;
+        }
+        .scroll span.arrow-right{
+            right:0;
+            left:auto;
+            background-position: right top;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            var index = 0;
+            var z_index = 100;
+            var timer = null;
+            $('.arrow-right').click(function(){
+                index++;
+                if(index > 4){
+                    index = 0;
+                }
+                play();
+            });
+
+            $('.arrow-left').click(function(){
+                index--;
+                if(index < 0){
+                    index = 4;
+                }
+                play();
+            });
+
+            $('ol li').mouseover(function(){
+                index = $(this).index();
+                play();
+            });
+
+            timer = setInterval(function(){
+                $('.arrow-right').click();
+            },2000);  
+
+            $('.scroll').mouseenter(function(){
+                clearInterval(timer);
+                $(this).find('span').css('display','block');
+            }).mouseleave(function(){
+                timer = setInterval(function(){
+                    $('.arrow-right').click();
+                },2000); 
+                $(this).find('span').css('display','none');
+            });       
+
+            function play(){
+                z_index++;
+                $('ul li:eq('+index+')').css('z-index', z_index).hide().stop().fadeTo(500, 1);
+
+                $('ol li:eq('+index+')').addClass('on').siblings().removeClass('on');
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="scroll">
+        <ul>
+            <li><img src="images/73/1.jpg" alt=""></li>
+            <li><img src="images/73/2.jpg" alt=""></li>
+            <li><img src="images/73/3.jpg" alt=""></li>
+            <li><img src="images/73/4.jpg" alt=""></li>
+            <li><img src="images/73/5.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+        <span class="arrow-left"></span>
+        <span class="arrow-right"></span>
+    </div>
+</body>
+</html>

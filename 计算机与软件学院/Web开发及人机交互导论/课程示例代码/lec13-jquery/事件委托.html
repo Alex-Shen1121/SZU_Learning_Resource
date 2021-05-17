@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+    <style>
+        li{
+            height:30px;
+            border:1px solid #000;
+            background-color: #ccc;
+        }
+        li span{
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            // 点击关闭按钮时关闭一整行
+            /*$('ul li span').click(function(){
+                $(this).parent().remove();
+            });*/
+            // 此处新添加的元素是没有点击span元素删除一整行的功能
+            // $('input:button').click(function(){
+            //     $('ul').prepend('<li>new<span>&times;</span></li>');
+            // });
+
+            $('input:button').bind('click',function(){
+                $('ul').prepend('<li>new<span>&times;</span></li>');
+            });
+
+            /*
+            // 使用delegate来做事件委托
+            // 通常将事件委托给他们的公共父级
+            $('ul').delegate('li span','click',function(){
+                $(this).parent().remove();
+            });
+
+            //取消事件委托
+            //$('ul').undelegate();
+
+            */
+
+            //用on来做事件委托
+            $('ul').on('click','li span',function(){
+                $(this).parent().remove();
+            });
+
+            //取消事件委托
+            //$('ul').off();
+        });
+    </script>
+</head>
+<body>
+    <input type="button" name="" value="新添加一个li">
+    <ul>
+        <li><span>&times;</span></li>
+        <li><span>&times;</span></li>
+        <li><span>&times;</span></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bikecycling.com</title>
+		<link type="text/css" rel="stylesheet" href="大作业.css" />
+	</head>
+	<body>
+		<div class="top">
+			<p style="float: left;">计算机与软件学院 沈晨玙 2019092121 Web开发及人机交互大作业</p>
+			<a href="login.html" style="float: right;position: relative; right: 100px;top: 15px;">登录</a>
+			<a href="register.html" style="float: right;position: relative; right: 10px;top: 15px;">注册</a>
+		</div>
+		<div class="wrapper">
+			<header>
+				<h1>www.Bikecycling.com</h1>
+				<nav style="position: relative; top: 100px;">
+					<ul>
+						<li><a href="主页.html">主页</a></li>
+						<li><a href="map.html">百度地图导航查询</a></li>
+						<li><a href="map2.html">百度地图共享单车位置查询</a></li>
+						<li><a href="EmployeePage.html" class="current">雇员入口</a></li>
+						<li><a href="EmployerPage.html">雇主入口</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="courses">
+				<div id="functionPlace">
+					<div id="function1">
+						<table>
+							<tbody>
+								<tr>
+									<th>序号</th>
+									<th>店名</th>
+									<th>地址</th>
+								</tr>
+								<tr>
+									<th>1.</th>
+									<td>粤兴单车维修</td>
+									<td>广东省深圳市南山区大板桥巷40-3号</td>
+								</tr>
+								<tr>
+									<th>2.</th>
+									<td>专业电动车单车维修</td>
+									<td>深圳市龙华区弓村一区20-1</td>
+								</tr>
+								<tr>
+									<th>3.</th>
+									<td>深圳市龙华区弓村一区20-1</td>
+									<td>广东省深圳市宝安区宝安大道新安五路167号</td>
+								</tr>
+								<tr>
+									<th>4.</th>
+									<td>一骑吧品牌电动车自行车维修</td>
+									<td>广东省深圳市南山区四海路3-4附近</td>
+								</tr>
+								<tr>
+									<th>5.</th>
+									<td>路路顺维修店</td>
+									<td>深圳市南山区红树街38号</td>
+								</tr>
+								<tr>
+									<th>6.</th>
+									<td>陈记电动车自行车维修</td>
+									<td>海城新村一区18-3号</td>
+								</tr>
+								<tr>
+									<th>7.</th>
+									<td>电动车自行车修理</td>
+									<td>广东省深圳市龙岗区龙岗中心城盛华路13号附近</td>
+								</tr>
+							</tbody>
+						</table>
+						<form>
+							<h4>
+								欢迎提供新的自行车维修点:
+							</h4>
+							<label>店名：</label>
+							<input type="text" name="shopname" size="15" maxlength="15" autocomplete="off" />
+							<label>地址：</label>
+							<input type="text" name="shopaddress" size="30" maxlength="30" autocomplete="off"/>
+							<input id="form1" type="button" onclick="clear1()" value="提交" />
+						</form>
+					</div>
+					<div id="function2">
+						<form>
+							<table class="table22">
+								<tbody id="table2">
+									<tr>
+										<th>序号</th>
+										<th>日期</th>
+										<th>骑行距离（km）</th>
+									</tr>
+									<tr>
+										<th>1.</th>
+										<td>2020-05-01</td>
+										<td>2km</td>
+									</tr>
+									<tr>
+										<th>2.</th>
+										<td>2020-05-15</td>
+										<td>4.5km</td>
+									</tr>
+									<tr>
+										<th>3.</th>
+										<td>2020-05-26</td>
+										<td>6km</td>
+									</tr>
+									<tr>
+										<th>4.</th>
+										<td>2020-06-01</td>
+										<td>3.2km</td>
+									</tr>
+								</tbody>
+							</table>
+							<h4>
+								输入并更新你的骑行日志:（可在价格计算器查询节约总费用）
+							</h4>
+							<form>
+								<label>日期:</label>
+								<input id="submitDate" type="date" name="date" />
+								<label>骑行距离:</label>
+								<input id="distance" type="text" name="distance" size="5" maxlength="5" autocomplete="off"/>
+								<input id="form2" type="button" onclick="clear2()" value="提交" />
+							</form>
+						</form>
+					</div>
+					<div id="function3">
+						<h2>活动介绍：</h2>
+						<p>加强国家的环保观念，我们公司提倡“低碳生活，从骑行开始;关爱地球，文明出行”的理念，营造一个“和谐、环保、健身、文明、沟通”的环境。<br />
+							带领自行车爱好者进行活动，为广大员工增加一个互相交流学习的平台，促进同事间关系，增进大家的友谊，促进大家团队合作的意识。<br />
+							为在员工提供一次锻炼身体的机会，增强大家的体质，提醒大家要时刻锻炼身体。<br />
+						</p>
+						<ol>
+							<h3>奖励如下：</h3>
+							<li>第1名：2000元+带薪休假3天</li>
+							<li>第2-5名：1000元+带薪休假2天</li>
+							<li>第5-10名：500元</li>
+						</ol>
+						<p>报名链接↓</p>
+						<form>
+							<label>工号:</label>
+							<input id="workNum" type="text" name="workNum" size="8" maxlength="8" placeholder="00000001" autocomplete="off"/>
+							<label>姓名:</label>
+							<input id="workerName" type="text" name="workerName" size="5" maxlength="5" placeholder="xxxxx" autocomplete="off"/>
+							<input id="form3" type="button" onclick="clear3()" value="提交" />
+						</form>
+					</div>
+					<div id="function4">
+						<p>说明：假设快车每公里1.6元，共享单车每公里0.2元，本页面可大致计算每月节约总费用</p>
+						<form>
+							<table class="table22">
+								<tbody id="table4">
+									<tr>
+										<th>序号</th>
+										<th>日期</th>
+										<th>骑行距离（km）</th>
+										<th>节约总费用（元）</th>
+									</tr>
+									<tr>
+										<th>1.</th>
+										<td>2020-05-01</td>
+										<td>2km</td>
+										<td>2.8</td>
+									</tr>
+									<tr>
+										<th>2.</th>
+										<td>2020-05-15</td>
+										<td>4.5km</td>
+										<td>9.1</td>
+									</tr>
+									<tr>
+										<th>3.</th>
+										<td>2020-05-26</td>
+										<td>6km</td>
+										<td>17.5</td>
+									</tr>
+									<tr>
+										<th>4.</th>
+										<td>2020-06-01</td>
+										<td>3.2km</td>
+										<td id="last5">21.98</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+			</section>
+			<aside>
+				<section class="functionMenu">
+					<h2>功能</h2>
+					<input type="button" class="functionButton" id="function1Button" value="深圳自行车维修点查询" />
+					<input type="button" class="functionButton" id="function2Button" value="每日骑行统计" /><br />
+					<input type="button" class="functionButton" id="function4Button" value="价格计算器" />
+					<input type="button" class="functionButton" id="function3Button" value="公司骑行活动报名" />
+				</section>
+				<section class="contact-details">
+					<h2>联系方式</h2>
+					<p>微博：xxxxxxxx<br />
+						微信公众号：xxxxxxxx<br />
+						网页开发人员微信：xxxxxxxx
+					</p>
+					<form>
+						<p>期待收到来自您的意见与反馈</p>
+						<textarea name="message" cols="25" rows="6" style="resize: none;"></textarea>
+						<input type="button" value="提交" />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="reset" value="清空" />
+					</form>
+				</section>
+			</aside>
+			<footer>
+				Created by AlexShen Email Address:939826879@qq.com
+			</footer>
+		</div>
+		<script type="text/javascript" src="大作业.js"></script>
+	</body>
+</html>

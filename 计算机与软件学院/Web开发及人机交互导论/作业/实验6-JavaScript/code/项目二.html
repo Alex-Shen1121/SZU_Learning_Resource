@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>计算圆的面积</title>
+		<style type="text/css">
+			div{
+				margin: 0 auto;
+				background: #66ffcc;
+				border: 12ox inset #ff0000;
+				width: 300px;
+				height: 130px;
+				text-align: center;
+			}
+			
+			form{
+				margin: 0 auto;
+				padding: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1" class="">
+			<form method="post" action="">
+				<label>半径：</label>
+				<input type="text" name="radiustext" id="radiustext" /><br>
+				<label>面积：</label>
+				<input type="text" name="areatext" id="areatext" readonly="readonly" />
+				<br><br>
+				<input type="button" value="计算" onclick="show();" />
+				&nbsp;&nbsp;<input type="reset" name="reset" value="清空" />
+			</form>
+			
+		</div>
+		<script type="text/javascript" src="area.js"></script>
+	</body>
+</html>

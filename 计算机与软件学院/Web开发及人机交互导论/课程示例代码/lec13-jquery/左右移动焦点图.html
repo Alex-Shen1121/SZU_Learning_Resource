@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左右移动焦点图</title>
+    <style>
+        *{margin:0;padding:0;}
+        img{
+            vertical-align: middle;
+        }
+        ul li,ol li{
+            list-style: none;
+            float: left;
+        }
+        .scroll-wrap{
+            width: 400px;
+            border:5px solid #ccc;
+            margin:100px auto 0;
+            position: relative;
+        }
+        .scoller{
+            width: 400px;
+            height: 307px;
+            overflow: hidden;
+            position: relative;
+        }
+        .scoller ul{
+            width: 2400px;
+            height: 307px;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .scroll-wrap span{
+            position: absolute;
+            left:-21px;
+            top:127px;
+            width:52px;
+            height: 52px;
+            cursor: pointer;
+            background: url('images/72/arr.png') no-repeat left top;
+        }
+        .scroll-wrap span.arrow_right{
+            right:-21px;
+            left:auto;
+            background-position: right top;
+        }
+        .scroll-wrap ol{
+            position: absolute;
+            left:136px;
+            bottom:-30px;
+            height:13px;
+        }
+        .scroll-wrap ol li{
+            width: 13px;
+            height:100%;
+            text-indent: -99999em;
+            cursor: pointer;
+            margin-right:10px;
+            background: url('images/72/00.png') no-repeat left top;
+        }
+        .scroll-wrap ol li.on{
+            background-position: left bottom;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            var index = 0;
+            var timer = null;
+            // 点击右箭头
+            $('.arrow_right').click(function(){
+                index++;
+                if(index > 5){
+                    index = 0;
+                }
+                change();
+            });
+            // 点击左箭头
+            $('.arrow_left').click(function(){
+                index--;
+                if(index < 0){
+                    index = 5;
+                }
+                change();
+            });
+
+            //点击小圆点
+            $("ol li").mouseover(function(){
+                index = $(this).index();
+                change();
+            });
+
+            //鼠标移到区域上
+            $('.scroll-wrap').mouseenter(function(){
+                clearInterval(timer);
+            }).mouseleave(function(){
+                // clearInterval(timer);
+                timer = setInterval(function(){
+                    $('.arrow_right').click();
+                },2000);
+            });
+
+            // clearInterval(timer);
+            timer = setInterval(function(){
+                $('.arrow_right').click();
+            },2000);
+
+            function change(){
+                $('.scoller ul').stop(true).animate({left:-index*400},500);
+
+                $('ol li:eq('+index+')').addClass('on').siblings().removeClass('on');
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="scroll-wrap">
+        <div class="scoller">
+            <ul>
+                <li><img src="images/72/01.jpg" alt=""></li>
+                <li><img src="images/72/02.jpg" alt=""></li>
+                <li><img src="images/72/03.jpg" alt=""></li>
+                <li><img src="images/72/04.jpg" alt=""></li>
+                <li><img src="images/72/05.jpg" alt=""></li>
+                <li><img src="images/72/06.jpg" alt=""></li>
+            </ul>
+        </div>
+        <span class="arrow_left"></span>
+        <span class="arrow_right"></span>
+        <ol>
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ol>
+    </div>
+</body>
+</html>

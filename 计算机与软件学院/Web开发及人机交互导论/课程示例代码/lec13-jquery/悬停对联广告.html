@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>悬停对联广告</title>
+    <style>
+        *{margin:0;padding:0;}
+        img{
+            margin:10px auto;
+            display: block;
+        }
+        .ads{
+            width:100px;
+            height:500px;
+            background-color: orange;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .ads span{
+            position:absolute;
+            left:0;
+            top:0;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .ad-right{
+            right:0;
+            left:auto;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var $ad = $('.ads');
+            var win_height = $(window).height();
+            var ad_height  = $ad.height();
+
+            var scroll_fun = function(){
+                var ad_top = $(window).scrollTop()+(win_height-ad_height)/2;
+                $ad.stop(true).animate({top:ad_top}, 500);
+            }
+
+            scroll_fun();
+
+            //当窗口滚动的时候，让小广告位于窗口的垂直的中央
+            $(window).scroll(scroll_fun);
+
+            //当单击关闭的时候，关闭广告
+            $('.ads span').click(function(){
+                $(this).parent().hide(500);
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <img src="images/content.png" alt="">
+    <div class="ads"><span>&times;</span></div>
+    <div class="ads ad-right"><span>&times;</span></div>
+</body>
+</html>

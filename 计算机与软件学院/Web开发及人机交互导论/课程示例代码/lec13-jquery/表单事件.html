@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单事件</title>
+    <style>
+        div{
+			width: 300px;
+			height: 300px;
+			border: 1px solid #000;
+			background-color: #000;
+		}
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            // 表单提交事件
+            $('form').submit(function(){
+                if($('input[type="text"]').val() == '' || $('textarea').val() == ''){
+                    alert('请填写完整的表单项再提交！！');
+                    return false;
+                }
+            });
+            // change事件
+            $('input[type="color"]').change(function(){
+                $('div').css('background-color',$(this).val());
+            });
+        })
+    </script>
+</head>
+<body>
+    <form action="https://tujiawang.github.io/">
+		<input type="text">
+		<br>
+		<br>
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+		<br>
+		<br>
+		<input type="submit" value="提交">
+	</form>
+	<br><br>
+
+	<input type="color" name="" id="">
+	<br><br>
+	<div></div>
+
+<br><br>
+
+submit：<br><br>
+当提交表单时，会发生 submit 事件。<br><br><br>
+
+change：<br><br>
+当元素的值发生改变时，会发生 change 事件。
+<br><br>
+</body>
+</html>

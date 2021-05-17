@@ -1,0 +1,39 @@
+{
+    "sessions": [
+       {
+            "time": "09.00",
+            "title": "Intro to 3D Modeling",
+            "detail": "Come learn how to create 3D models of parts you can then make on our bus! You'll get to know the same 3D modeling software that is used worldwide in professional settings like engineering, product design, and more. Develop and test ideas in a fun and informative session hosted by Bella Stone, professional roboticist."
+        },
+        {
+            "time": "10.00",
+            "title": "Circuit Hacking",
+            "detail": "Head to the Electro-Tent for a free introductory soldering lesson. There will be electronics kits on hand for those who wish to make things, and experienced hackers and engineers around to answer all your questions. Feel free to bring your own projects to work on if you have them! Run by Luke Seyfort, elite hacker and The Maker Bus' official lab monitor."
+        },
+        {
+            "time": "11.30",
+            "title": "Arduino Antics",
+            "detail": "Learn how to program and use an Arduino! This easy-to-learn open source microcontroller board takes all sorts of sensor inputs, follows user-generated programs, and outputs data and power. Arduinos are commonly used in robotics, mechatronics, and all manners of electronics projects around the world. Taught by Elsie Denney, professional software developer with a long previous career as a technical artist in the video game industry, electronics enthusiast and instructor."
+        },
+        {
+            "time": "13.00",
+            "title": "The Printed Lunch",
+            "detail": "Discover and taste the brave new world of the printed lunch. You will not only get to see how 3D printers are being used to recreate traditional foods, but also see entirely new types of treats being made. Will you be the visitor that we create a chocolate model of?"
+        },
+        {
+            "time": "14.00",
+            "title": "Droning On",
+            "detail": "We have ways of keeping you awake after lunch. This session will be policed by a set of quadcopters remotely controlled via many different types of sensor hooked up to an Arduino board. Snoozing could result in a visit from the drones..."
+        },
+        {
+            "time": "15.00",
+            "title": "Brain Hacking",
+            "detail": "With advances in affordable electro-encephalography, measuring brain waves is something accessible to everyone. Celebrated neuroscientist Cino Rylands will be inviting the audience to participate in creating a symphony of the mind."
+        },
+        {
+            "time": "16.30",
+            "title": "Make The Future",
+            "detail": "See how the next generation of makers can be inspired to create a new future for themselves. Learn all about the different tools we can use to enlighten and encourage others to get on board the bus!"
+        }
+    ]
+}

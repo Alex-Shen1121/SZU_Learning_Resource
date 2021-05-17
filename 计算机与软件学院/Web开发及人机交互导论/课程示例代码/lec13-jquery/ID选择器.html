@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script type="text/javascript" src="lib/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#test").hide();
+            });
+        });
+        $(document).ready(function(){
+            $(".button-test").click(function(){
+                $(".test").hide();
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+<p id="test">If you click on me, I will disappear.</p>
+<button>Id选择器</button>
+<p class="test">这个是class的实例，点击后会消失</p>
+<button class="button-test">Id选择器</button>
+</body>
+
+</html>

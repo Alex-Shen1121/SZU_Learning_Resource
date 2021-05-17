@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝焦点图</title>
+    <style>
+        *{margin:0;padding:0;}
+        ol li,ul li{
+            list-style: none;
+        }
+        .banner{
+            width: 520px;
+            height: 280px;
+            margin:100px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner ul{
+            width: 1000%;
+            height:100%;
+            position: absolute;
+            left:0%;
+            top:0;
+        }
+        .banner ul li{
+            float: left;
+            width: 10%;
+            height:100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner ul li img{
+            position: absolute;
+            left:50%;
+            top:0;
+            margin-left: -260px;
+        }
+        .banner ol{
+            width: 65px;
+            height: 13px;
+            border-radius: 6px;
+            background: rgba(255,255,255,.3);
+            position: absolute;
+            left:50%;
+            bottom:12px;
+            margin-left:-23px;
+        }
+        .banner ol li{
+            width: 9px;
+            height: 9px;
+            background: #b7b7b7;
+            float: left;
+            margin:2px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .banner ol li.cur{
+            background: #f40;
+        }
+        .banner span{
+            width: 24px;
+            height: 36px;
+            line-height: 36px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            left:0;
+            top:50%;
+            margin-top:-13px;
+            text-align: center;
+            display: none;
+        }
+        .banner span.arrow-right{
+            right:0;
+            left:auto;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+    $(function(){
+        var index = 0;
+        var $ul = $(".banner ul");
+        var $ol_li = $('.banner ol li');
+        var $ol_len = $('.banner ol li').length;
+        var $banner = $('.banner');
+        var second = 1000;
+        var timer = null;
+
+        //点击播放下一张
+        $('.arrow-right').click(function(){
+            //为了防止用户点击速度过快导致轮播出现奇怪现象，第一种办法就是给每个动画前加上stop(true)，但是这里加上之后又问题，就是点击过快时，图片会有一半到中间，所以这里只能采取第二种方法，就是判断当前是否在运动，运动则不理它
+            if($ul.is(':animated')){
+                return;
+            }
+            index++;
+
+            slide();
+            
+        });
+
+        //点击播放上一张
+        $('.arrow-left').click(function(){
+            if($ul.is(':animated')){
+                return;
+            }
+            index--;
+
+            slide();
+            
+        });
+
+
+        //角标的切换
+        $ol_li.click(function(e){
+            if($ul.is(':animated')){
+                return;
+            }
+            //判断两种情况，当用户点击第一张图片，当前运动到底五张图片，功能类似下一张；当用户点击最后一张图片时，当前运动到第一张，功能类似上一张
+            if($(this).index() == 0 && index == 4){
+                $('.arrow-right').click();
+            }else if($(this).index() == 4 && index == 0){
+                $('.arrow-left').click();
+            }else{
+                index = $(this).index();
+                slide();
+            }
+            
+        });
+
+        //自动播放
+        timer = setInterval(function(){
+             $('.arrow-right').click();
+        },2000);
+
+        //当鼠标移到banner上时停止播放，移开继续播放
+        $banner.mouseenter(function(){
+            $('.banner span').show();
+            clearInterval(timer);
+        }).mouseleave(function(){
+            //自动播放
+            timer = setInterval(function(){
+                $('.arrow-right').click();
+            },2000);
+            $('.banner span').hide();
+        });
+
+        function slide(){
+            //判断当到达最后一张时，需要特殊处理，复制第一张图片放到最后，然后当切换到底5张时需要把整体瞬间切换到后面才能保证点击下一张一直是向前运动，这里jquery的动画有一个回调函数表示动画执行完后所需执行的操作，这里当第5张执行完后就改变整体ul的位置
+            if(index >= 0 && index < $ol_len){  //正常进行切换
+                //图片的切换
+                $ul.animate({left:'-'+index+'00%'},second);
+
+                //角标的切换
+                $ol_li.eq(index).addClass('cur').siblings().removeClass('cur');
+            }else if(index < 0){
+                index = $ol_len - 1;
+                //图片的切换
+                $ul.css({left:'-'+$ol_len+'00%'}).animate({left:'-'+index+'00%'},second);
+
+                //角标的切换
+                $ol_li.eq(index).addClass('cur').siblings().removeClass('cur');
+            }else if(index >= $ol_len){
+                index = 0;
+                //图片的切换
+                $ul.animate({left:'-'+$ol_len+'00%'},second,'swing',function(){
+                    //回调函数就是当动画执行完后将替身换成本尊
+                    $ul.css({left:'0%'});
+                });
+
+                //角标的切换
+                $ol_li.eq(index).addClass('cur').siblings().removeClass('cur');
+            }
+        }
+    })
+    </script>
+</head>
+<body>
+    <div class="banner">
+        <ul>
+            <li><img src="images/focus1/1.jpg" alt=""></li>
+            <li><img src="images/focus1/2.jpg" alt=""></li>
+            <li><img src="images/focus1/3.jpg" alt=""></li>
+            <li><img src="images/focus1/4.jpg" alt=""></li>
+            <li><img src="images/focus1/5.jpg" alt=""></li>
+            <li><img src="images/focus1/1.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="cur"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <span class="arrow-left">&lt;</span>
+        <span class="arrow-right">&gt;</span>
+    </div>
+</body>
+</html>

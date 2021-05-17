@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽高级</title>
+    <style>
+        *{margin:0;padding:0;}
+        div{
+            width: 900px;
+            height: 600px;
+            margin:20px auto 0;
+            border:1px solid #000;
+            background-color: #ccc;
+            position: relative;
+        }
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: lightpink;
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: move;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            //当鼠标按下时
+            $('span').mousedown(function(){
+                //鼠标移动时
+                $(document).mousemove(function(e){
+                    var span_left = e.pageX - $('div').offset().left - $('span').width() /2;
+                    var span_top = e.pageY - $('div').offset().top - $('span').height()/2;
+                    //判断边界值
+                    if(span_left < 0){ //如果遇到左边界
+                        span_left = 0;
+                    }else if(span_left > $('div').width() - $('span').width()){ //如果遇到右边界
+                        span_left = $('div').width() - $('span').width();
+                    }
+
+                    //因为有可能同时遇到左边界和上边界或者下边界，所以判断要分开
+                    if(span_top < 0){ //如果遇到上边界
+                        span_top = 0;
+                    }else if(span_top > $('div').height() - $('span').height()){ //如果遇到下边界
+                        span_top = $('div').height() - $('span').height();
+                    }
+
+                    $('span').css({left:span_left,top:span_top});
+                }).mouseup(function(){ //鼠标松开时
+                    $(this).unbind('mousemove');
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <span></span>
+    </div>
+</body>
+</html>

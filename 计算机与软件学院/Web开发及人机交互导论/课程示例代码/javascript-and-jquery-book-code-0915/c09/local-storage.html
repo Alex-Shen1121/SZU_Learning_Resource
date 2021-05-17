@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 9: APIs - Local Storage</title>
+    <link rel="stylesheet" href="css/c09.css" />
+  </head>
+  <body>
+    <header><h1>THE MAKER BUS</h1></header>
+    <h2>What would you like to make?</h2>
+    <div class="third"><img src="img/toys1.jpg" alt="Circuit boards" /></div>
+    <div class="two-thirds">
+      <!-- There is no apply.php file with the download (the action of the form)
+           It is just an example of where the user may be taken
+           Go back to the page after submitting the form and you should still see your data in the form -->
+      <form id="application" action="apply.php">
+        <label for="username">Name</label><input type="text" id="username" name="username" /><br>
+        <label for="answer">Answer</label><textarea id="answer" name="answer"></textarea>
+          <input type="submit" value="Save" />
+      </form>
+    </div>
+    <script src="js/modernizr.2.7.1.js"></script>
+    <script src="js/local-storage.js"></script>
+  </body>
+</html>

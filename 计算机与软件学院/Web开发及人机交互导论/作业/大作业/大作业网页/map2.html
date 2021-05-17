@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=fHoxemPvtk_xMKaBjnF-4y95ynWXWrhrCX2w4bs9YDmc3qJsiUbW93Y1iuNCC_dMj0gOtMaBQqhawrZJ8HDJZg"
+		 charset="UTF-8"></script>
+		<link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cDovL2xic3l1bi5iYWlkdS5jb20vanNkZW1vL2RlbW8vYzFfMy5odG0" />
+		<style type="text/css">
+			body,
+			html,
+			#allmap {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				margin: 0;
+				font-family: "微软雅黑";
+			}
+
+			#l-map {
+				height: 100%;
+				width: 78%;
+				float: left;
+				border-right: 2px solid #bcbcbc;
+			}
+
+			#r-result {
+				height: 100%;
+				width: 20%;
+				float: left;
+			}
+
+			.top {
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				padding: 0px;
+				margin: 0px;
+				height: 50px;
+				width: 100%;
+				background-color: gainsboro;
+				z-index: 2;
+			}
+
+			body {
+				color: #666666;
+				background-color: #f9f8f6;
+				background-image: url("image/dark-wood.jpg");
+				background-position: center;
+				font-family: 黑体;
+				line-height: 1.4em;
+				margin: 0px;
+			}
+		</style>
+		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=3mRtpNAy8fG5G1RlUot9z85TECtBLCd9"></script>
+		<title>百度地图共享单车位置查询</title>
+	</head>
+	<body>
+		<div class="top">
+			<p style="float: left;">计算机与软件学院 沈晨玙 2019092121 Web开发及人机交互大作业</p>
+			<a href="主页.html" style="float: right;position: relative; right: 10px;top: 15px;">返回主页面</a>
+		</div>
+		<div id="allmap"></div>
+	</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(113.94585, 22.537589);
+	map.enableScrollWheelZoom();
+	map.centerAndZoom(point, 20);
+	// 编写自定义函数,创建标注
+	function addMarker(point) {
+		var marker = new BMap.Marker(point);
+		map.addOverlay(marker);
+	}
+	// 随机向地图添加25个标注
+	var bounds = map.getBounds();
+	var sw = bounds.getSouthWest();
+	var ne = bounds.getNorthEast();
+	var lngSpan = Math.abs(sw.lng - ne.lng);
+	var latSpan = Math.abs(ne.lat - sw.lat);
+	for (var i = 0; i < 70; i++) {
+		var point = new BMap.Point(sw.lng + lngSpan * (Math.random() * 1), ne.lat - latSpan * (Math.random() * 1));
+		addMarker(point);
+	}
+</script>

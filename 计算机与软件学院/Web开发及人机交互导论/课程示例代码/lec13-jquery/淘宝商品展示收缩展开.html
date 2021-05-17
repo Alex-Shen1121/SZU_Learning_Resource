@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝商品展开和收缩</title>
+    <style>
+        *{margin:0;padding:0;}
+        div{
+            width: 500px;
+            margin:20px auto 0;
+            border:1px solid red;
+        }
+        ul{
+            overflow: hidden;
+            padding:45px;
+        }
+        ul li{
+            list-style: none;
+            float:left;
+            width: 135px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+        }
+        div p{
+            width: 200px;
+            margin:10px auto;
+            border:1px solid red;
+            text-align: center;
+            height:30px;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        ul li:not(:nth-child(-n+3)):not(:last-child){
+            display: none;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $('div p').click(function(){
+                $('ul li:gt(2):not(:last)').slideToggle(500);
+                if($(this).html() == '显示所有内容'){
+                    $(this).html("隐藏所有内容");
+                }else{
+                    $(this).html("显示所有内容");
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>佳能</li>
+            <li>索尼</li>
+            <li>三星</li>
+            <li>尼康</li>
+            <li>松下</li>
+            <li>卡西欧</li>
+            <li>富士</li>
+            <li>可达</li>
+            <li>宾得</li>
+            <li>理光</li>
+            <li>奥林巴斯</li>
+            <li>明基</li>
+            <li>显示其他品牌</li>
+        </ul>
+        <p>显示所有内容</p>
+    </div>
+</body>
+</html>

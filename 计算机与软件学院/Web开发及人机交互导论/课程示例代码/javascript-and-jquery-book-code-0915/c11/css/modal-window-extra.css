@@ -1,0 +1,55 @@
+.modal {
+  position: absolute;
+  z-index: 1000;
+  padding: 50px;
+  background-color: #555;}
+
+.modal-close {
+  cursor: pointer;}
+
+#window {
+  background: #fff;
+  text-align: center;}
+
+.social {
+  color: #858585;}
+
+
+#share {
+  position: absolute;
+  top: 10px;
+  left: 10px;}
+
+#share-options {
+  background-color: #fff;
+  text-align: center;
+  clear: both;
+  padding: 20px;}
+
+#window a {
+  margin: 3px;}
+
+button.modal-close {
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;}
+
+button.modal-close:hover {
+  border: none;
+  background-color: #efefef;
+  border-radius: 5px;
+  color: #ed8e6c;
+  padding: 5px;}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: alpha(opacity=75); /* IE8 */
+  background: #000; /* IE8 */
+  background: rgba(0,0,0,0.75);
+  z-index: 999;}

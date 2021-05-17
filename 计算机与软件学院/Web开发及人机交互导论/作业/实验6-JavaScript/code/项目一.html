@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>改变网页字号大小</title>
+		<style type="text/css">
+			#div1 {
+				text-align: center;
+				font-size: 12px;
+			}
+
+			#content {
+				font-size: 12px;
+				line-height: 200%;
+				padding: 10px;
+				background: #000099;
+				color: white;
+				border: 2px groove #0000cc;
+			}
+		</style>
+	</head>
+	<body>
+
+		<h3 align="center">用JavaScript代码改变网页字体大小</h3>
+		<div id="div1">
+			选择字号【
+			<a href="javascript:setFont('12px')">小</a>
+			<a href="#" onclick="javascript:setFont('18px');">中</a>
+			<a href="javascript:setFont('24px')">大</a>
+			】
+		</div>
+		<div id="content" style="width: 800px; margin: 0 auto;">
+			<p>
+				JavaScript是一种能让你的网页更加生动活泼的程序语言，也是目前网页设计中最容易学又最方便的语言。你可以利用JavaScript轻易的做出亲切的欢饮讯息、漂亮的数字中、有广告效果的跑马灯及简易的彩票选号器，还可以显示浏览器停留的时间，让这些特殊效果提高网页的可观性。
+			</p>
+		</div>
+
+
+		<script type="text/javascript">
+			function setFont(size) {
+				var obj = document.getElementById("content");
+				obj.style.fontSize = size;
+				obj.style.color = "#ff0000";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条吸顶</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul li{
+            list-style: none;
+            width: 150px;
+            height: 150px;
+            border:1px solid #000;
+            margin:30px;
+        }
+        ul li:nth-child(3) div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var div_offset = $('ul li:eq(2) div').offset().top;
+            $(window).scroll(function(){
+                if($(this).scrollTop() >= div_offset){
+                    //alert("kjhkl");
+                    $('ul li:eq(2) div').css({position:'fixed',top:0});
+                }else{
+                    $('ul li:eq(2) div').css('position','static');
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li><div></div></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

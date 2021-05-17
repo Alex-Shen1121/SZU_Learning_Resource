@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 13: Form Enhancement and Validation - Populate a selectbox</title>
+    <link rel="stylesheet" href="css/c13.css" />
+  </head>
+  <body>
+    <div class="container login">
+      <form name="howHeard" id="howHeard" action="/heard" method="post">
+        <div class="one-third column">
+          <img src="img/logo.png" alt="logo" id="logo" />
+        </div>
+        <div class="two-thirds column" id="main">
+          <fieldset>
+            <legend>Equipment hire</legend>
+              <label for="equipmentType">type</label>
+              <select id="equipmentType" name="equipmentType">
+                <option value="choose">Please choose a type</option>
+                <option value="cameras">camera</option>
+                <option value="projectors">projector</option>
+              </select><br>
+              <label for="model">model</label>
+              <select id="model" name="model">
+                <option>Please choose a type first</option>
+              </select>
+              <input id="submit" type="submit" value="submit" />
+          </fieldset>
+        </div><!-- .two-thirds -->
+      </form>
+    </div><!-- .container -->
+    <script src="js/utilities.js"></script>
+    <script src="js/populate-selectbox.js"></script>
+  </body>
+</html>

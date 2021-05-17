@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽基础</title>
+    <style>
+        *{margin:0;padding:0;}
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            position: absolute;
+            left:0;
+            top:0;
+            cursor: move;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            /*
+                拖拽的分步实现：
+                第一步：鼠标按下
+                第二步：鼠标移动时盒子跟着移动
+            */
+            var $span = $('span');
+            var span_width = $('span').width();
+            var span_height = $('span').height();
+            var win_width = $(window).width();
+            var win_height = $(window).height();
+            $span.mousedown(function(){
+                $(document).mousemove(function(e){
+                    //要控制拖拽元素不能超出边界
+                    var left_x = e.pageX-span_width/2;
+                    var top_y = e.pageY-span_height/2;
+                    
+                    if(left_x < 0){ //超出左边的边界
+                        left_x = 0;
+                    }else if(left_x > win_width - span_width){ //超出右边的边界
+                        left_x = win_width - span_width;
+                    }
+
+                    if(top_y < 0){ //超出上边的边界
+                        top_y = 0;
+                    }else if(top_y > win_height - span_height){ //超出下边的边界
+                        top_y = win_height - span_height;
+                    }
+
+                    $span.css({left:left_x,top:top_y});
+                });
+            });
+
+            //鼠标松开时取消绑定事件
+            $(document).mouseup(function(){
+                $(document).unbind('mousemove');
+            });
+            
+        })
+    </script>
+</head>
+<body>
+    <span></span>
+</body>
+</html>

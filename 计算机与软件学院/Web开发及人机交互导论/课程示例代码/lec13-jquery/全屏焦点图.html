@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏焦点图</title>
+    <style>
+        *{margin:0;padding:0;}
+        .banner{
+            width: 100%;
+            height: 380px;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner ul{
+            /*width:400%;*/
+            width: 1000%;  /*当图片增多时需要每次来改，所以干脆把值给大点*/
+            position: absolute;
+            left:0%;  /*保证在任何屏幕下都能很好的占满一屏，不会因为滑动过程中造成影响*/
+            top:0;
+            /*border:1px solid red;*/
+        }
+        /*
+            全屏的焦点图，需要注意此处的宽度
+            此处的宽度无论何时都要占满一屏，而ul的宽度为400%，所以此处li的宽度为ul的四分之一即25%
+        */
+        .banner ul li{
+            height:380px;
+            /*width:25%;*/
+            width: 10%;
+            float: left;
+            background: url('images/74/1.jpg') no-repeat center top;
+            list-style: none;
+        }
+        .banner span{
+            position: absolute;
+            left:20%;
+            top:140px;
+            width: 100px;
+            height: 100px;
+            font-size:100px;
+            color:#fff;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+            display: none;
+        }
+        .banner span.arrow-right{
+            right:20%;
+            left:auto;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            var index = 0;
+            var timer = null;
+
+            //当屏幕分辨率很高时图片两边就没有任何内容，所以给添加一个和图片两边颜色相同的背景色
+            var colors = ['#070512','#000000','#43A3F9','#020202'];
+            $('ul li').each(function(index,el){
+                $(this).css('background-color',colors[index]);
+            });
+
+
+            $('.arrow-right').click(function(){
+                index++;
+                if(index > 3){
+                    index = 0;
+                }
+                //此处要注意js中不支持百分比的写法，所以需要拼接后留给css处理
+                $('ul').animate({left:-index*100+'%'},1000);
+            });
+            $('.arrow-left').click(function(){
+                index--;
+                if(index < 0){
+                    index = 3;
+                }
+                //此处要注意js中不支持百分比的写法，所以需要拼接后留给css处理
+                $('ul').animate({left:-index*100+'%'},1000);
+            });
+
+            $('.banner').mouseenter(function(){
+                $(this).find('span').fadeIn();
+                clearInterval(timer);
+            }).mouseleave(function(){
+                $(this).find('span').fadeOut();
+                paly();
+            }).mouseleave();
+
+            function paly(){
+                timer = setInterval(function(){
+                    $('.arrow-right').trigger('click');
+                },2000);
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="banner">
+        <ul>
+            <li></li>
+            <li style="background-image:url('images/74/2.jpg')"></li>
+            <li style="background-image:url('images/74/3.jpg')"></li>
+            <li style="background-image:url('images/74/4.jpg')"></li>
+        </ul>
+        <span class="arrow-left">&lt;</span>
+        <span class="arrow-right">&gt;</span>
+    </div>
+</body>
+</html>

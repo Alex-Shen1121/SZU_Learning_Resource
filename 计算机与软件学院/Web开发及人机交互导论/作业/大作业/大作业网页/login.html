@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bikecycling.com</title>
+		<meta charset="utf-8">
+		<link type="text/css" rel="stylesheet" href="大作业.css" />
+	</head>
+	<body>
+		<div class="top">
+			<p style="float: left;">计算机与软件学院 沈晨玙 2019092121 Web开发及人机交互大作业</p>
+			<a href="login.html" style="float: right;position: relative; right: 100px;top: 15px;">登录</a>
+			<a href="register.html" style="float: right;position: relative; right: 10px;top: 15px;">注册</a>
+		</div>
+		<div class="wrapper">
+			<header>
+				<h1>www.Bikecycling.com</h1>
+				<nav style="position: relative; top: 100px;">
+					<ul>
+						<li><a href="主页.html" class="current">主页</a></li>
+						<li><a href="map.html">百度地图导航查询</a></li>
+						<li><a href="map2.html">百度地图共享单车位置查询</a></li>
+						<li><a href="EmployeePage.html">雇员入口</a></li>
+						<li><a href="EmployerPage.html">雇主入口</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="courses">
+				<div style="width:500px; margin:0 auto; position: relative; top: 100px;">
+					<div style="font-size:22px; font-family: 楷体;" align="center"><h2><b>Bikecycling.com欢迎您！</b></h2></div>
+					<br />
+					<form>
+						<label for="username" style="font-size:18px">用户名：</label>
+						<div style="height:35px; width:400px; position:relative; display:inline">
+							<input id="username" type="text" style="height:30px; width:350px; padding-right:50px;">
+							<span style="position:absolute; right:18px; top:2px; height:16px; width:16px; display:inline-block;"></span>
+						</div>
+						<br />
+						<br />
+						<label for="password1" style="font-size:18px"  autocomplete="off">密&emsp;码：</label>
+						<div style="height:35px; width:400px; position:relative; display:inline">
+							<input id="password1" type="text" style="height:30px; width:350px; padding-right:50px;">
+							<span style="position:absolute; right:16px; top:2px; height:16px; width:16px; display:inline-block;"></span>
+						</div>
+						<br />
+						<br />
+						<label for="verification_code" style="font-size:18px"  autocomplete="off">验证码：</label>
+						<input id="verification_code" type="text" style="height:30px; width:350px; padding-right:50px;">
+						<br />
+						<br />
+						<div style="width:426px; float: right;">
+							<input type="radio" name="auto_login" value="1" /> 自动登录
+							<a href="register.html">注册</a>
+						</div>
+						<br />
+						<br />
+						<div style="width:426px; float: right;">
+							<input type="submit" value="登录" style="height:30px; width:400px; background-color: coral;" />
+						</div>
+					</form>
+				</div>
+			</section>
+			<aside>
+				<section class="related-website">
+					<h2>自行车相关网页</h2>
+					<a href="http://www.chinabike.net/" target="_blank">中国自行车爱好者</a>
+					<a href="http://www.china-bicycle.com/" target="_blank">中国自行车协会网</a>
+					<a href="https://baike.baidu.com/item/%E8%87%AA%E8%A1%8C%E8%BD%A6/190564?fr=aladdin" target="_blank">自行车百度百科</a>
+				</section>
+				<section class="contact-details">
+					<h2>联系方式</h2>
+					<p>微博：xxxxxxxx<br />
+						微信公众号：xxxxxxxx<br />
+						网页开发人员微信：xxxxxxxx
+					</p>
+					<form>
+						<p>期待收到来自您的意见与反馈</p>
+						<textarea name="message" cols="25" rows="6" style="resize: none;"></textarea>
+						<input type="button" value="提交" />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="reset" value="清空" />
+					</form>
+				</section>
+			</aside>
+			<footer>
+				Created by AlexShen Email Address:939826879@qq.com
+			</footer>
+		</div>
+	</body>
+</html>

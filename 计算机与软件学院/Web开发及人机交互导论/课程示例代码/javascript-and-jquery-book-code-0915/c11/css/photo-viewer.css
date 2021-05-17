@@ -1,0 +1,59 @@
+/********** MAIN PICTURE **********/
+#photo-viewer {
+  position: relative;
+  height: 300px;
+  overflow: hidden;}
+
+#photo-viewer.is-loading:after {
+  content: url('../img/load.gif');
+  position: absolute;
+  top: 0;
+  left: 0;}
+
+#photo-viewer img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;}
+
+
+/********** THUMBNAILS **********/
+#thumbnails {
+  margin: 10px 5px 0 0;
+  height: 60px;}
+
+a.active {
+  opacity: 0.3;}
+
+
+/********** PARTS OF PAGES **********/
+.gallery{
+  width: 400px;
+  padding: 20px;
+  float: left;}
+
+.description {
+  width: 180px;
+  float: right;
+  padding: 20px 20px 0 0;
+  font-size: 85%;
+  line-height: 1em;}
+
+.standfirst {
+  margin: 0;}
+
+
+/********** BUY BUTTON **********/
+a#buy {
+  background-color: #ed8e6c;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 10px 9px 10px;
+  margin: 5px 0 20px 0;
+  float: right;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;}
+
+a#buy:hover {background-color: #ed612f;}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件触发</title>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $('form').submit(function(){
+                if($('input:text').val() == '' || $('input:password').val() == ''){
+                    alert('请填写表单项后提交！！！')
+                    return false;
+                }
+            });
+            $('input:button').click(function(){
+                $('form').submit();
+                //$('form').trigger('submit');
+                //不建议使用，有很多bug，会阻止默认事件
+                $('form').triggerHandler('submit');
+            });
+        })
+    </script>
+</head>
+<body>
+    <form action="https://tujiawang.github.io/">
+        用户名：<input type="text" name="username"><br><br>
+		密　码：<input type="password" name="pwd" id=""><br><br>
+		<input type="button" value="登录">
+    </form>
+</body>
+</html>

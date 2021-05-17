@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loading jQuery</title>
+  </head>
+  <body>
+    <h1>Loading jQuery from jQuery</h1>
+    <p>This page demonstrates loading jQuery from the jQuery CDN with a local fallback.</p>
+    <p id="test">If jQuery has loaded, a script will replace this element.</p>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="js/jquery-1.10.2.js"><\/script>')
+    </script>
+    <script src="js/jq-loaded.js"></script>
+  </body>
+</html>

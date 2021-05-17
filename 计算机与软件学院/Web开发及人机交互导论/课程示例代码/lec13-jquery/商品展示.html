@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品展示</title>
+    <style>
+        *{margin:0;padding:0;}
+        img{vertical-align: middle;}
+        ul{
+            margin:100px 0 0 100px;
+        }
+        ul li{
+            list-style: none;
+            float: left;
+            border:1px solid #ccc;
+            margin-right:20px;
+            cursor: pointer;
+        }
+        .big-img{
+            position: absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            var $big;
+            //鼠标移到li上面时创建大图并让大图显示在相应的位置
+            $('ul li').mouseenter(function(e){
+                //从图片的自定义属性中获取大图
+                $big =  $('<img class="big-img" src='+$(this).find('img').attr('data-big')+'>');
+                $big.css({left:e.pageX+10,top:e.pageY+10});
+                $('body').append($big);
+            });
+
+            //当鼠标离开li时删除创建的大图
+            $('ul li').mouseleave(function(){
+                $big.remove();
+            });
+
+            //当鼠标在li上移动时让大图跟随移动
+            $('ul li').mousemove(function(e){
+                $big.css({left:e.pageX+10,top:e.pageY+10});
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li><img src="images/68/1.jpg" data-big="images/68/1_bigger.jpg" alt=""></li>
+        <li><img src="images/68/2.jpg" data-big="images/68/2_bigger.jpg" alt=""></li>
+        <li><img src="images/68/3.jpg" data-big="images/68/3_bigger.jpg" alt=""></li>
+        <li><img src="images/68/4.jpg" data-big="images/68/4_bigger.jpg" alt=""></li>
+        <li><img src="images/68/5.jpg" data-big="images/68/5_bigger.jpg" alt=""></li>
+        <li><img src="images/68/6.jpg" data-big="images/68/6_bigger.jpg" alt=""></li>
+    </ul>
+</body>
+</html>

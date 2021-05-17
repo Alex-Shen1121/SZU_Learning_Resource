@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 13: Form Enhancement and Validation - Polyfill for placeholder attribute</title>
+    <link rel="stylesheet" href="css/c13.css" />
+  </head>
+  <body>
+  <div class="container">
+    <form method="post" action="/register">
+      <div class="one-third column">
+        <img src="img/logo.png" alt="logo" id="logo" />
+      </div>
+      <div class="two-thirds column" id="main">
+        <fieldset>
+          <legend>Register</legend>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="username" />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="you@yourdomain.com" />
+          <label for="dob">Date of birth:</label>
+          <input type="text" id="dob" name="dob" placeholder="yyyy-mm-dd" />
+          <input type="submit" value="Register" />
+        </fieldset>
+      </div><!-- .two-thirds -->
+    </form>
+  </div><!-- .container -->
+  <script src="js/jquery-1.9.1.js"></script>
+  <script src="js/utilities.js"></script>
+  <script src="js/placeholder-polyfill.js"></script>
+  </body>
+</html>

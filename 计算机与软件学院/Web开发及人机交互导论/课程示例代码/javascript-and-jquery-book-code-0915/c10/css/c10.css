@@ -1,0 +1,116 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+html { 
+  background: url(../img/paint-backdrop.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+
+body {
+	background-color:# fff;
+	font-family: 'Open Sans', arial, sans-serif;}
+
+form, #contact, #page {
+	background-color: #fff;
+	padding: 1em;
+	width: 270px;
+	margin: 50px auto 100px auto;
+	box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+	border-radius: 3px;}
+
+#logo {
+	position: fixed;
+	top: 0px;
+	left: 50px;}
+
+input {
+	font-size: 1.2em;
+	line-height: 1.6em;
+	height: 50px;
+	padding: 0px 10px;
+	border: none;
+	margin-bottom: 2px;}
+
+h2 {
+	margin: 0px;
+	font-size: 1.2em;}
+
+input[type=submit] {
+	background-color: #14b9d6;
+	display: block;
+	margin: 20px auto 20px auto;
+	border-radius: 5px;
+	line-height: 1em;
+	padding: 0em 2em 0em 2em;
+	color: #fff;
+	-webkit-appearance: none;}
+
+input[type=submit]:hover {
+	background-color: #ff8800;
+	cursor: pointer;}
+
+input[type=text] {
+	background-color: #474849;
+	padding-left: 40px;
+	width: 220px;}
+
+input {
+	color: #fff;
+	font-size: 1em;
+ 	font-weight: bold;}
+
+#width, #height {
+	background-repeat: no-repeat;
+    background-position: 10px center; 
+    padding-left: 40px;}
+
+#width {background-image: url('../img/paint-width.png');}
+#height {background-image: url('../img/paint-height.png');}
+
+h2 {
+	color: #474849;
+	text-align: left;
+	height: 40px;}
+
+p {
+	background-color: #fff;
+	width: 250px;
+	padding: 10px 0px 10px 0px;
+	margin: 0px;
+	font-size: 1.6em;
+	border-top: 1px solid #999;
+	text-align: center;
+	color: #14b9d6;
+	font-weight: bold;}
+
+#contact p, #page p {
+	font-size: 100%;}
+
+a {
+	color: #1fbba6;}
+
+.deal {padding: 20px;}
+.deal h2, .deal p, .deal a {width: 240px;}
+a {font-size: 80%;}
+
+a[href='try-catch-finally.html'] {
+	display: inline-block;
+	margin-top: 20px;
+	background-color: #1fbba6;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 120%;
+	margin: 0px 0px 20px 20px;}
+
+#feed em {
+	margin: 10px;
+	display: block;
+	padding: 10px;}
+
+::-webkit-input-placeholder {color: #fff; font-weight: bold;}
+:-moz-placeholder {color: #fff; font-weight: bold;}
+::-moz-placeholder {color: #fff; font-weight: bold;}
+:-ms-input-placeholder {color: #fff; font-weight: bold;}

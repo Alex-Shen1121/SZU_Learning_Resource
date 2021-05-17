@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航效果</title>
+    <style>
+        *{margin:0;padding:0;}
+        img{
+            vertical-align: middle;
+            border:none;
+        }
+        body{
+            background-color: #f5f5f5;
+        }
+        div{
+            width: 792px;
+            height:290px;
+            margin:100px auto 0;
+            border:1px solid #ccc;
+            padding:20px 0 0 20px;
+        }
+        ul li{
+            list-style: none;
+            float: left;
+            margin:0 20px 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        ul li p,ul li span{
+            position: absolute;
+            left:0;
+            bottom:-24px;
+        }
+        ul li p{
+            height:24px;
+            background-color: #000;
+            width: 100%;
+            opacity: 0.5;
+            filter: (opacity=50);
+        }
+        ul li span{
+            font-size: 12px;
+            height:24px;
+            line-height: 24px;
+            color: #fff;
+            cursor: pointer;
+            width: 100%;
+            text-indent:26px;
+            background: url('images/69/bg.png') no-repeat 0 0;
+        }
+    </style>
+    <script src='lib/jquery-1.12.4.min.js'></script>
+    <script>
+        $(function(){
+            //利用jquery循环给每个span改变图片位置
+            $('ul li span').each(function(index,el){
+                $(this).css('background-position','0 -'+index*24+'px');
+            });
+            $('ul li').hover(function(){
+                $(this).children('p,span').stop(true).animate({bottom:0},500);
+            },function(){
+                $(this).children('p,span').stop(true).animate({bottom:-24},500);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                <a href=""><img src="images/69/01.JPG" alt=""></a>
+                <p></p>
+                <span>百度一下，你就知道</span>
+            </li>
+            <li>
+                <a href=""><img src="images/69/02.JPG" alt=""></a>
+                <p></p>
+                <span>淘！我喜欢</span>
+            </li>
+            <li>
+                <a href=""><img src="images/69/03.JPG" alt=""></a>
+                <p></p>
+                <span>百度一下，你就知道了！</span>
+            </li>
+            <li>
+                <a href=""><img src="images/69/04.JPG" alt=""></a>
+                <p></p>
+                <span>百度一下，你就知道了！</span>
+            </li>
+            <li>
+                <a href=""><img src="images/69/05.JPG" alt=""></a>
+                <p></p>
+                <span>百度一下，你就知道了！</span>
+            </li>
+            <li>
+                <a href=""><img src="images/69/06.JPG" alt=""></a>
+                <p></p>
+                <span>百度一下，你就知道了！</span>
+            </li>
+            <li>
+                <a href=""><img src="images/69/07.JPG" alt=""></a>
+                <p></p>
+                <span>中国领先视频网站</span>
+            </li>
+            <li>
+                <a href=""><img src="images/69/08.JPG" alt=""></a>
+                <p></p>
+                <span>综合网购首选</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

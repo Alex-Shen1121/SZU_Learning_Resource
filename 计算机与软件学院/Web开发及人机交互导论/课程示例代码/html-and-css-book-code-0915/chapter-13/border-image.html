@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Border Image</title>
+		<style type="text/css">
+			p {
+				width: 197px;
+				height: 54px;
+				border: 11px solid #ffffff;}
+			p.one {
+				-moz-border-image: url("images/dots.gif") 11 11 11 11 stretch;
+				-webkit-border-image: url("images/dots.gif") 11 11 11 11 stretch;				border-image: url("images/dots.gif") 11 11 11 11 stretch;}			p.two {				-moz-border-image: url("images/dots.gif") 11 11 11 11 round;
+				-webkit-border-image: url("images/dots.gif") 11 11 11 11 round;
+				border-image: url("images/dots.gif") 11 11 11 11 round;}
+		</style>
+	</head>
+	<body>
+		<p class="one"></p>
+		<p class="two"></p>
+	</body>
+</html>

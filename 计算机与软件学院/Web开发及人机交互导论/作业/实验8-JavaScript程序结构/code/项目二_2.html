@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>计算∑N！</title>
+		<style type="text/css">
+			#div1 {
+				background: #000000;
+				color: white;
+				width: 500px;
+				height: 300px;
+				margin: 100px auto;
+				font-size: 18px;
+				border: 20px inset #aa55ff;
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			function compute_factorial(n) {
+				var sum = 1;
+				var i = 1;
+				for (i = 1; i <= n; i++) {
+					sum *= i;
+				}
+				return sum;
+			}
+
+			function func(N) {
+				var sum = 0,
+					temp = 0;
+				if (N == 0) {
+					return 1;
+				} else {
+					for (var i = 1; i <= N; i++) {
+						temp = compute_factorial(i);
+						sum += temp;
+					}
+				}
+				return sum;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<h2>计算∑N！</h2>
+			<form>
+				<p>输入整数N的值：<input type="text" id="data" /></p>
+				<p>∑N！=&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="text" readonly="readonly" id="answer" /></p>
+				<p><input id="cal" type="button" value="计算∑N!" style="position: relative; right: 50px; width: 100px;height: 50px;" /><input
+					 type="reset" value="清空" style="position: relative; left: 50px; width: 100px;height: 50px;" /></p>
+			</form>
+		</div>
+		<script type="text/javascript">
+			document.getElementById('cal').onclick = function() {
+				var num = 1;
+				var N = document.getElementById('data').value;
+				var sum=func(N);
+				document.getElementById('answer').value=sum;
+			}
+		</script>
+	</body>
+</html>

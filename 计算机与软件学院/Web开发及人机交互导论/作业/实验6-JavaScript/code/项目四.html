@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>系统内部函数使用</title>
+		<style type="text/css">
+			div {
+				background: #000099;
+				color: white;
+				width: 1000px;
+				font-size: 20px;
+				font-weight: bolder;
+			}
+			h4{
+				text-align: center;
+			}
+			b{
+				color:red;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h4>系统函数使用</h4>
+			
+			<b>1. eval（“字符串”）</b>
+			<br />
+			<script type="text/javascript">
+				var rel = eval("1000+3/5");
+				document.write("&nbsp;&nbsp;" + "1000+3/5=" + rel);
+				document.write("<br />");
+				document.write("&nbsp;&nbsp;" + "x=10,y=20,x*y=" + eval("10*20"));
+				document.write("<br />&nbsp;&nbsp;2+2=" + eval("2+2"));
+				document.write("<br />");
+				var x = 10;
+				document.write("&nbsp;&nbsp;" + "x=10,x+17=" + eval(x+17));
+				document.write("<br />");
+			</script>
+			
+			<b>2. escape（“字符串”）</b>
+			<br />
+			<script type="text/javascript">
+				document.write("&nbsp;&nbsp;" +"eacape('&')="+escape('&'));
+				document.write("<br />");
+				document.write("&nbsp;&nbsp;" +"eacape('&nbsp;&nbsp;my name is 张华')="+escape('&nbsp;&nbsp;my name is 张华'));
+				document.write("<br />");
+			</script>
+			
+			<b>3. unescape（string）</b>
+			<br />
+			<script type="text/javascript">
+				document.write("&nbsp;&nbsp;" +"unescape('%26')="+unescape('%26'));
+				document.write("<br />");
+				document.write("&nbsp;&nbsp;" +"uneacape('my%20name%20is%20%u5F20%u534E')="+unescape('my%20name%20is%20%u5F20%u534E'));
+				document.write("<br />");
+			</script>
+			
+			<b>4. parseFloat（string）</b>
+			<br />
+			<script type="text/javascript">
+				document.write("&nbsp;&nbsp;" +"parseFloat('3.14')="+parseFloat('3.14'));
+				document.write("<br />");
+				document.write("&nbsp;&nbsp;" +"parseFloat('314e-2')="+parseFloat('314e-2'));
+				document.write("<br />");
+				document.write("&nbsp;&nbsp;" +"parseFloat('3.14ab')="+parseFloat('3.14ab'));
+				document.write("<br />");
+				document.write("&nbsp;&nbsp;" +"parseFloat('FF2')="+parseFloat('FF2'));
+				document.write("<br />");
+			</script>
+			
+			<b>5. parseInt（numberstring,radix）</b>
+			<br />
+			<script type="text/javascript">
+				document.write("&nbsp;&nbsp;" +"32:"+parseInt("32",10));
+				document.write("<br />");
+				document.write("&nbsp;&nbsp;" +"032:"+parseInt("032",8));
+				document.write("<br />");
+				document.write("&nbsp;&nbsp;" +"0x32:"+parseInt("0x32",16));
+				document.write("<br />");
+				document.write("&nbsp;&nbsp;" +"parseInt('15*3',10)="+parseInt('15*3',10));
+				document.write("<br />");
+			</script>
+			
+			<b>6. isNaN（）</b>
+			<br />
+			<script type="text/javascript">
+				document.write("&nbsp;&nbsp;" +"isNaN(\"5454g\")="+isNaN("5454g"));
+				document.write("<br />");
+				document.write("&nbsp;&nbsp;" +"isNaN(\"789\")"+isNaN("789"));
+				document.write("<br />");
+			</script>
+		</div>
+	</body>
+</html>

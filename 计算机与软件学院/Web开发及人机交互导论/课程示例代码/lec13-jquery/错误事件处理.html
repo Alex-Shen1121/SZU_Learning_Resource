@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>错误事件处理</title>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            //错误处理事件，可以将出错的图片替换
+            $('img').error(function(){
+                //$(this).replaceWith('<img src="images/logo.png">');
+                $(this).attr('src','images/logo.png');
+            });
+        })
+    </script>
+</head>
+<body>
+    <img src="images/1000.jpg" alt="">
+</body>
+</html>

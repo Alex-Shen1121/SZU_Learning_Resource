@@ -1,0 +1,20 @@
+/* Typography */
+
+body {
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 100%;}
+p {
+	font-size: 0.75em;}
+.intro {
+	font-size: 1em;}
+h1 {
+	font-size: 1.5em;}
+h2 {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	border-bottom: 1px solid #d6d6d6;
+	margin-bottom: 0px;}
+h3 {
+	font-size: 0.875em;
+	margin: 0px;}

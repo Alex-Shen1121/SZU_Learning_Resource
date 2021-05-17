@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝广告</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul li{
+            list-style: none;
+        }
+        div{
+            width: 250px;
+            height: 250px;
+            border:1px solid #edafab;
+            margin:20px auto 0;
+            overflow: hidden;
+        }
+        .img-title{
+            width: 49px;
+            border-right:1px solid #edafab;
+            float: left;
+        }
+        .img-title li.cur{
+            background: url('images/60/bg.gif');
+        }
+        .img-title li{
+            height: 27px;
+            border-bottom:1px solid #edafab;
+            font-size: 12px;
+            line-height: 27px;
+            text-align: center;
+            background-color: #fcf2f1;
+            cursor: pointer;
+        }
+        .img-content{
+            float: left;
+        }
+        .img-content li{
+            display: none;
+        }
+        .img-content li.cur{
+            display: block;
+        }
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            //当前图片或者标题的索引值
+            var index = 0;
+            var timer = null;
+            var $img_title_li = $('.img-title li');
+            var $img_content_li =  $('.img-content li');
+
+            $img_title_li.mouseenter(function(){
+                index = $(this).index();
+                //切换标题的样式
+                $(this).addClass('cur').siblings().removeClass();
+
+                // 切换图片
+                $img_content_li.eq(index).addClass('cur').siblings().removeClass();
+            });
+
+            //当鼠标离开div区域时自动播放
+            $('div').mouseleave(function(){
+                timer = setInterval(function(){
+                    index++;
+                    //索引值的范围控制，不能超过li的长度
+                    if(index >= $img_title_li.length){
+                        index = 0;
+                    }
+                    //切换标题的样式
+                    $img_title_li.eq(index).addClass('cur').siblings().removeClass();
+
+                    // 切换图片
+                    $img_content_li.eq(index).addClass('cur').siblings().removeClass();
+                },1000);
+            }).mouseenter(function(){
+                clearInterval(timer);
+            }).mouseleave();//页面加载完后就触发鼠标离开事件让其自动播放
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <ul class="img-title">
+            <li class="cur">女靴</li>
+		    <li>雪地靴</li>
+		    <li>冬裙</li>
+		    <li>呢大衣</li>
+		    <li>毛衣</li>
+		    <li>棉服</li>
+		    <li>女裤</li>
+		    <li>羽绒服</li>
+		    <li>牛仔裤</li>
+        </ul>
+        <ul class="img-content">
+            <li class="cur"><img src="images/60/女靴.jpg"></li>
+		    <li><img src="images/60/雪地靴.jpg"></li>
+		    <li><img src="images/60/冬裙.jpg"></li>
+		    <li><img src="images/60/呢大衣.jpg"></li>
+		    <li><img src="images/60/毛衣.jpg"></li>
+		    <li><img src="images/60/棉服.jpg"></li>
+		    <li><img src="images/60/女裤.jpg"></li>
+		    <li><img src="images/60/羽绒服.jpg"></li>
+		    <li><img src="images/60/牛仔裤.jpg"></li>
+        </ul>
+    </div>
+</body>
+</html>

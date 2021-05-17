@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>焦点事件</title>
+    <style type="text/css">
+    *{ padding:0; margin:0; list-style:none; border:0;}
+    .all{ width:258px; height:40px;  margin:100px auto;}
+    .all #txt{ float:left; width:200px; height:40px; background:url(images/49/left.jpg) no-repeat; padding-left:16px; line-height:40px; font-size:14px; color:#ccc;}
+    .all #btn{ float:left; width:42px; height:40px; background:url(images/49/right.jpg) no-repeat; cursor:pointer;}
+    </style>
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script>
+    $(function(){
+        $('input:text').focus(function(){
+            if($.trim($(this).val())=='请输入内容'){
+                $(this).val('').css('color','#000');
+            }
+        }).blur(function(){
+            if($.trim($(this).val())==''){
+                $(this).val('请输入内容').css('color','#ccc');
+            }
+        });
+    })
+    </script>
+</head>
+<body>
+<div class="all">
+	<input type="text" id="txt" value="请输入内容"><input type="button" id="btn">
+</div>
+</body>
+</html>

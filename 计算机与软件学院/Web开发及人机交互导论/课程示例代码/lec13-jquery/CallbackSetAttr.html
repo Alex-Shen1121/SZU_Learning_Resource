@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="lib/jquery-1.8.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#w3s").attr("href", function(i,origValue){
+                    return origValue + "/view?path=158-241-";
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+<p><a href="http://csse.szu.edu.cn/cn" id="w3s">csse.szu.edu.cn</a></p>
+<button>改变 href 值</button>
+<p>请把鼠标指针移动到链接上，或者点击该链接，来查看已经改变的 href 值。</p>
+</body>
+</html>

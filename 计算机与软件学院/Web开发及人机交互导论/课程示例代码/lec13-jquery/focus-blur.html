@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Focus Blur Demo</title>
+    <script type="text/javascript" src="lib/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#_focus").focus(function () {
+                $(this).css("color", "red");
+            });
+            $("#_focus").blur(function(){
+                $(this).css("color","blue");
+            });
+
+        })
+
+    </script>
+
+</head>
+<body>
+<input type="button" value="Focus button" id="_focus">
+<input type="button" value="Blur button" id="_blur">
+
+
+</body>
+
+</html>

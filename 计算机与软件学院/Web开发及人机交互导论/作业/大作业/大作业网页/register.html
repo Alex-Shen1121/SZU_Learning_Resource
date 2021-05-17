@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bikecycling.com</title>
+		<meta charset="utf-8">
+		<link type="text/css" rel="stylesheet" href="大作业.css" />
+	</head>
+	<body>
+		<div class="top">
+			<p style="float: left;">计算机与软件学院 沈晨玙 2019092121 Web开发及人机交互大作业</p>
+			<a href="login.html" style="float: right;position: relative; right: 100px;top: 15px;">登录</a>
+			<a href="register.html" style="float: right;position: relative; right: 10px;top: 15px;">注册</a>
+		</div>
+		<div class="wrapper">
+			<header>
+				<h1>www.Bikecycling.com</h1>
+				<nav style="position: relative; top: 100px;">
+					<ul>
+						<li><a href="主页.html" class="current">主页</a></li>
+						<li><a href="map.html">百度地图导航查询</a></li>
+						<li><a href="map2.html">百度地图共享单车位置查询</a></li>
+						<li><a href="EmployeePage.html">雇员入口</a></li>
+						<li><a href="EmployerPage.html">雇主入口</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="courses" style="height: 580px;">
+				<form style="position: relative; top: 25px;">
+					<div style="width:500px; margin:0 auto;">
+						<div style="font-size:22px;" align="center">注册新用户</div>
+						<br />
+						<span class="registerp">*</span>
+						<label for="username" class="registerl">用户名:</label>
+						<input id="username" type="text" style="height:30px; width:260px; padding-right:50px;" autocomplete="off">
+						<br /><br />
+						<span class="registerp">*</span>
+						<label for="identity" class="registerl">身份:</label>&nbsp;&nbsp;
+							<input type="radio" value="employee">雇员&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="radio" value="employer">雇主&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="radio" value="visitor">游客
+						<br /><br />
+						<span class="registerp">*</span>
+						<label for="phonenumber" class="registerl">手机号:</label>
+						<div class="registerd">
+							<input id="phonenumber" type="text" class="registeri" autocomplete="off">
+						</div>
+						<br /><br />
+						<span class="registerc">*</span>
+						<label for="login_password" class="registerl">登录密码:</label>
+						<div class="registerd">
+							<input id="login_password" type="text" class="registeri" autocomplete="off">
+						</div>
+						<br /><br />
+						<span class="registerc">*</span>
+						<label for="confirm_password" class="registerl">确认密码:</label>
+						<div class="registerd">
+							<input id="confirm_password" type="text" class="registeri" autocomplete="off">
+						</div>
+						<br /><br />
+						<span class="registerp">*</span>
+						<label for="ver_code" class="registerl">验证码:</label>
+						<div class="registerd">
+							<input id="ver_code" type="text" class="registeri" autocomplete="off">
+						</div>
+						<br /><br />
+						<input type="checkbox" name="agree" style="margin-left:100px; display:inline-block;" value="1" autocomplete="off" />
+						<span style="font-size:16px;">我已阅读并同意《用户注册协议》</span>
+						<br /><br />
+						<input type="submit" value="同意以上协议并注册" style="margin-left:100px; height:30px; width:300px; background-color:coral; display:inline-block;" />
+					</div>
+				</form>
+			</section>
+			<aside>
+				<section class="related-website">
+					<h2>自行车相关网页</h2>
+					<a href="http://www.chinabike.net/" target="_blank">中国自行车爱好者</a>
+					<a href="http://www.china-bicycle.com/" target="_blank">中国自行车协会网</a>
+					<a href="https://baike.baidu.com/item/%E8%87%AA%E8%A1%8C%E8%BD%A6/190564?fr=aladdin" target="_blank">自行车百度百科</a>
+				</section>
+				<section class="contact-details">
+					<h2>联系方式</h2>
+					<p>微博：xxxxxxxx<br />
+						微信公众号：xxxxxxxx<br />
+						网页开发人员微信：xxxxxxxx
+					</p>
+					<form>
+						<p>期待收到来自您的意见与反馈</p>
+						<textarea name="message" cols="25" rows="6" style="resize: none;"></textarea>
+						<input type="button" value="提交" />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="reset" value="清空" />
+					</form>
+				</section>
+			</aside>
+			<footer>
+				Created by AlexShen Email Address:939826879@qq.com
+			</footer>
+		</div>
+	</body>
+</html>

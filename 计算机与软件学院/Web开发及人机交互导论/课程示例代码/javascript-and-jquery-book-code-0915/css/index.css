@@ -1,0 +1,37 @@
+/* CSS for Index Page */
+
+body {
+  font-family: Gotham, Helvetica, Arial, sans-serif;
+  color: #58595B;
+  margin: 0px auto;
+  padding: 30px;
+  background: #f7f7f7;
+  text-align: center;}
+
+h1 {
+   text-transform: uppercase;}
+
+h3 {
+    color: #00ab95;}
+
+a {
+  color: #00ab95;
+  text-decoration: none;}
+
+a:hover {
+  color: #ed6c7b;}
+
+table {
+  padding: 0px;
+  margin-left:auto; 
+  margin-right:auto;}
+
+td {
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 3px;
+  text-align: left;}
+
+.blank {
+  background: #f7f7f7;}

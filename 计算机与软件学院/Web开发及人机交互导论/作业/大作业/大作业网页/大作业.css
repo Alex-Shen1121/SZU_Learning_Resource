@@ -1,0 +1,253 @@
+.wrapper {
+	width: 940px;
+	margin: 20px auto 20px auto;
+	border: 2px solid #000000;
+	background-color: #ffffff;
+}
+
+.top {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	padding: 0px;
+	margin: 0px;
+	height: 50px;
+	width: 100%;
+	background-color: gainsboro;
+	/*位于最高层 永远位于页面顶端*/
+	z-index: 2;
+}
+
+.registerp {
+	color: red;
+	margin-left: 20px;
+	display: inline-block;
+}
+
+.registerc {
+	color: red;
+	margin-left: 4px;
+	display: inline-block;
+}
+
+.registerl {
+	font-size: 18px;
+}
+
+.registerd {
+	height: 35px;
+	width: 300px;
+	display: inline;
+}
+
+.registeri {
+	height: 30px;
+	width: 300px;
+}
+
+.table22 {
+	border-spacing: 40px 5px;
+}
+
+#function1 {
+	display: none;
+}
+
+#function2 {
+	display: none;
+}
+
+#function3 {
+	display: none;
+}
+
+#function4 {
+	display: none;
+}
+
+.functionButton {
+	color: #444444;
+	font-size: 16px;
+	text-shadow: 0px 1px 1px #ffffff;
+	border-bottom: 2px solid #b2b2b2;
+	background-color: #b9e4e3;
+	/*设置平常渐变颜色*/
+	background: -webkit-gradient(linear, left top, left bottom, from(#beeae9), to(#a8cfce));
+	background: -moz-linear-gradient(top, #beeae9, #a8cfce);
+	background: -o-linear-gradient(top, #beeae9, #a8cfce);
+	background: -ms-linear-gradient(top, #beeae9, #a8cfce);
+}
+
+.functionButton:hover {
+	color: #333333;
+	border: 1px solid #a4a4a4;
+	border-top: 2px solid #b2b2b2;
+	background-color: #a0dbc4;
+	/*设置hover时的渐变色*/
+	background: -webkit-gradient(linear, left top, left bottom, from(#a8cfce), to(#beeae9));
+	background: -moz-linear-gradient(top, #a8cfce, #beeae9);
+	background: -o-linear-gradient(top, #a8cfce, #beeae9);
+	background: -ms-linear-gradient(top, #a8cfce, #beeae9);
+}
+
+#functionPlace {
+	width: 670px;
+	height: 450px;
+	margin: 50px 10px;
+}
+
+header,
+section,
+footer,
+aside,
+nav,
+article,
+figure,
+figcaption {
+	display: block;
+}
+
+body {
+	color: #666666;
+	background-color: #f9f8f6;
+	background-image: url("image/dark-wood.jpg");
+	background-position: center;
+	font-family: 黑体;
+	line-height: 1.4em;
+	margin: 0px;
+}
+
+input {
+	font-size: 80%;
+	color: #5a5854;
+	background-color: #f2f2f2;
+	border: 1px solid #bdbdbd;
+	/*设置inputbox的边框圆角形状*/
+	border-radius: 5px;
+	padding: 5px 10px 5px 10px;
+	margin-bottom: 10px;
+}
+
+table {
+	font-size: 18px;
+	line-height: 25px;
+}
+
+header {
+	height: 250px;
+	background-image: url(image/header.jpg);
+}
+
+h1 {
+	width: 940px;
+	height: 130px;
+	margin: 0px;
+}
+
+nav,
+footer {
+	clear: both;
+	color: #ffffff;
+	background-color: #aeaca8;
+	height: 30px;
+}
+
+nav ul {
+	margin: 0px;
+	padding: 5px 0px 5px 30px;
+}
+
+nav li {
+	display: inline;
+	margin-right: 40px;
+}
+
+nav li a {
+	color: #ffffff;
+}
+
+/*设置即将访问或正在访问的页面的导航栏样式*/
+nav li a:hover,
+nav li a.current {
+	color: #000000;
+}
+
+section.courses {
+	float: left;
+	width: 680px;
+	border-right: 1px solid #eeeeee;
+}
+
+article {
+	clear: both;
+	/*如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。*/
+	overflow: auto;
+	width: 100%;
+}
+
+hgroup {
+	margin-top: 40px;
+}
+
+figure {
+	float: left;
+	width: 290px;
+	height: 220px;
+	padding: 5px;
+	margin: 20px;
+	border: 1px solid #eeeeee;
+}
+
+figcaption {
+	font-size: 90%;
+	text-align: left;
+}
+
+aside {
+	width: 230px;
+	/*紧贴section*/
+	float: left;
+	padding: 0px 0px 0px 20px;
+}
+
+aside section a {
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+aside section a:hover {
+	color: #985d6a;
+	background-color: #efefef;
+}
+
+a {
+	color: #de6581;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: normal;
+}
+
+h2 {
+	margin: 10px 0px 5px 0px;
+	padding: 0px;
+}
+
+h3 {
+	margin: 0px 0px 10px 0px;
+	color: #de6581;
+}
+
+aside h2 {
+	padding: 30px 0px 10px 0px;
+	color: #de6581;
+}
+
+footer {
+	font-size: 80%;
+	padding: 7px 0px 0px 20px;
+}

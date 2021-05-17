@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="lib/jquery-1.8.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#test1").text(function(i,origText){
+                    return "Old text: " + origText + " New text: Hello world! (index: " + i + ")";
+                });
+            });
+
+            $("#btn2").click(function(){
+                $("#test2").html(function(i,origText){
+                    return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")";
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+<p id="test1">这是<b>粗体</b>文本。</p>
+<p id="test2">这是另一段<b>粗体</b>文本。</p>
+<button id="btn1">显示旧/新文本</button>
+<button id="btn2">显示旧/新 HTML</button>
+</body>
+</html>

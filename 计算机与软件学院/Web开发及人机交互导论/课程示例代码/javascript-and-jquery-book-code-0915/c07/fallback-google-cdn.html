@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loading jQuery</title>
+  </head>
+  <body>
+    <h1>Loading jQuery from Google</h1>
+    <p>This page demonstrates loading jQuery from the Google CDN with a local fallback.</p>
+    <p id="test">This code only works when placed on a server. It would not work locally because there is no http: in the start of the script.</p>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="js/jquery-1.10.2.js"><\/script>')
+    </script>
+    <script src="js/jq-loaded.js"></script>
+  </body>
+</html>

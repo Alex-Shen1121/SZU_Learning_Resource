@@ -12,9 +12,15 @@
 
 实验详解：
 
-1. [LC-3仿真器安装和使用]([[计算机系统]LC-3仿真器安装和使用_Alex_SCY的博客-CSDN博客](https://blog.csdn.net/pigpigpig64/article/details/116905991?spm=1001.2014.3001.5501))
+1. [LC-3仿真器安装和使用](https://blog.csdn.net/pigpigpig64/article/details/116905991?spm=1001.2014.3001.5501)
+2. [LC-3机器码编程试验](https://blog.csdn.net/pigpigpig64/article/details/116906298?spm=1001.2014.3001.5501)
+3. [LC-3汇编语言试验1 求成绩等级](https://blog.csdn.net/pigpigpig64/article/details/116906311?spm=1001.2014.3001.5501)
+4. [LC-3简单游戏设计](https://blog.csdn.net/pigpigpig64/article/details/116939936?spm=1001.2014.3001.5501)
+5. [LC-3中断试验](https://blog.csdn.net/pigpigpig64/article/details/116941079?spm=1001.2014.3001.5501)
 
-2. [LC-3机器码编程试验]([[计算机系统]LC-3机器码编程试验_Alex_SCY的博客-CSDN博客](https://blog.csdn.net/pigpigpig64/article/details/116906298?spm=1001.2014.3001.5501))
-3. [LC-3汇编语言试验1 求成绩等级]([[计算机系统]LC-3汇编语言试验1 求成绩等级_Alex_SCY的博客-CSDN博客](https://blog.csdn.net/pigpigpig64/article/details/116906311?spm=1001.2014.3001.5501))
-4. [LC-3简单游戏设计]([[计算机系统]LC-3简单游戏设计_Alex_SCY的博客-CSDN博客](https://blog.csdn.net/pigpigpig64/article/details/116939936?spm=1001.2014.3001.5501))
-5. [LC-3中断试验]([[计算机系统]LC-3中断试验_Alex_SCY的博客-CSDN博客](https://blog.csdn.net/pigpigpig64/article/details/116941079?spm=1001.2014.3001.5501))
+
+
+**LC-3仿真器安装包：**
+
+链接：https://pan.baidu.com/s/1sQbGWRb7MepFB1iL_ivIUA 
+提取码：huk6 

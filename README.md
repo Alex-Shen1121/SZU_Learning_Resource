@@ -35,7 +35,7 @@
 
 |  |  |  |  |
 | :---: | :----: | :---: | :----: |
-| [计算机系统（1）](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F(1)) | [计算机导论](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AF%BC%E8%AE%BA) | [Web开发与人机交互](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2/Web%E5%BC%80%E5%8F%91%E5%8F%8A%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E5%AF%BC%E8%AE%BA) | [程序设计基础](#art-面向对象) |
+| [计算机系统（1）](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F(1)) | [计算机导论](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AF%BC%E8%AE%BA) | [Web开发与人机交互](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2/Web%E5%BC%80%E5%8F%91%E5%8F%8A%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E5%AF%BC%E8%AE%BA) | [程序设计基础](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/计算机与软件学院/程序设计基础) |
 
 
 ## 贡献

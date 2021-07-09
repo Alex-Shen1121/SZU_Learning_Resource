@@ -1,0 +1,36 @@
+{{extend './common/layout.art'}} {{block 'link'}}
+<link rel="stylesheet" href="/home/css/index.css">{{/block}} {{block 'main'}} {{include './common/header.art'}}
+<!-- 文章列表开始 -->
+<ul class="list w1100">
+    {{each result}}
+    <li class="{{$index%2==0?'fl':'fr'}}">
+        <a href="/home/article?id={{@$value._id}}" class="thumbnail">
+            <img src="{{$value.cover}}">
+        </a>
+        <div class="content">
+            <a class="article-title" href="/home/article?id={{@$value._id}}">{{$value.title}}</a>
+            <div class="article-info">
+                <span class="author">{{$value.author.username}}</span>
+                <span>{{dateFormat($value.publishDate,'yyyy-mm-dd')}}</span>
+            </div>
+            <div class="brief">
+                {{@$value.content.replace(/<[^>]+>/g, '').substr(0, 50) + '...'}}
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ul>
+<!-- 文章列表结束 -->
+
+<!-- 分页开始 -->
+<div class="page w1100">
+    <a href="#">上一页</a>
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">下一页</a>
+</div>
+<!-- 分页结束 -->
+{{/block}}

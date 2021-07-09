@@ -1,0 +1,27 @@
+<!-- 侧边栏 -->
+        <div class="aside fl">
+            <ul class="menu list-unstyled">
+                <li style:"display:none">
+                    <a class="item {{userInfo.role=='normal'?'hidden':''}} {{currentLink=='user'?'active':''}}" href="/admin/user">
+						<span class="glyphicon glyphicon-user "></span>
+						用户管理
+					</a>
+                </li>
+                <li>
+                <li >
+                    <a class="item {{currentLink=='article'?'active':''}}" href="/admin/article">
+			  			<span class="glyphicon glyphicon-th-list"></span>
+			  			文章管理
+			  		</a>
+                </li>
+                <li>
+                    <a class="item " href="/home">
+						<span class="glyphicon glyphicon-home"></span>
+						首页
+					</a>
+                </li>
+            </ul>
+            <div class="cprt">
+                Powered by <a href="http://www.szu.edu.cn/" target="_blank">SZU</a>
+            </div>
+</div>

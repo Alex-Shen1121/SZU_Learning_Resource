@@ -1,0 +1,52 @@
+{{extend './common/layout.art'}} {{block 'link'}}
+<link rel="stylesheet" href="/home/css/article.css"> {{/block}} {{block 'main'}} {{include './common/header.art'}}
+<!-- 文章框架开始 -->
+<div class="article">
+    <div class="w1100">
+        <div class="container">
+            <div class="article-header">
+                <h3 class="article-title">{{article.title}}</h3>
+                <div class="article-info">
+                    <span class="author">{{article.author.username}}</span>
+                    <span>{{dateFormat(article.publishDate,'yyyy-mm-dd')}}</span>
+                </div>
+            </div>
+            <div class="article-content">
+                {{@article.content}}
+            </div>
+            <div class="article-comment">
+                {{if userInfo&&userInfo.state==0}}
+                <h4>评论</h4>
+                <form class="comment-form" action="/home/comment" method="post">
+                    <textarea class="comment" name="content"></textarea>
+                    <input type="hidden" name="uid" value="{{@userInfo._id}}">
+                    <input type="hidden" name="aid" value="{{@article._id}}">
+                    <div class="items">
+                        <input type="submit" value="提交">
+                    </div>
+                </form>
+                {{else}}
+                <div>
+                    <h2>请先登录未被禁用的账户，再对文章进行评论</h2>
+                </div>
+                {{/if}}
+                <div class="comment-list">
+                    {{each comments}}
+                    <div class="mb10">
+                        <div class="article-info">
+                            <span class="author">{{$value.uid.username}}</span>
+                            <span>{{dateFormat($value.time,'yyyy-mm-dd')}}</span>
+                            <span>{{$value.uid.email}}</span>
+                        </div>
+                        <div class="comment-content">
+                            {{$value.content}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 文章框架结束 -->
+{{/block}}

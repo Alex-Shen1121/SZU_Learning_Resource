@@ -1,0 +1,30 @@
+<!-- 头部框架开始 -->
+<div class="header">
+    <div class="w1100" >
+        <!-- 网站logo开始 -->
+        <h1 class="logo fl">
+            <a href="/home"><img src="images/logo1.png" alt="深圳大学"></a>
+        </h1>
+        <!-- 网站logo结束 -->
+        <!-- 网站导航开始 -->
+        <ul class="navigation fr">
+            <li>
+                <a class="" href="/home">首页</a>
+            </li>
+            <li>
+                <a href={{userInfo?"#":"/admin/login"}} class="btn dropdown-toggle" data-toggle="dropdown">{{userInfo?userInfo.username:"登录"}}</a>
+                
+            </li>
+             <li>
+                <a class="" href="/admin/article">发文章</a>
+            </li>
+            <li>
+                {{if userInfo}}
+                <a href={{userInfo?"/home/logout":"#"}} class="btn dropdown-toggle" data-toggle="dropdown">{{userInfo?"退出":""}}</a>
+                {{/if}}
+            </li>
+        </ul>
+        <!-- 网站导航结束 -->
+    </div>
+</div>
+<!-- 头部框架结束 -->

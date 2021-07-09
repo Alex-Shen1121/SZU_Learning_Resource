@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/admin/css/base.css">
+</head>
+
+<body>
+    <div class="login-body">
+        <div class="login-container">
+            <h4 class="title">系统设计与数据库系统 - SZU校园博客登录系统</h4>
+            <div class="login">
+                <form action="/admin/login" method="post" id="loginForm">
+                    <div class="form-group">
+                        <label>邮件</label>
+                        <input name="email" type="email" class="form-control" placeholder="请输入邮件地址">
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input name="password" type="password" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <button type="submit" class="btn btn-primary">登录</button>
+                </form>
+            </div>
+            <div class="tips"></div>
+        </div>
+    </div>
+    <script src="/admin/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script><script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    function serializeToJson(form){
+    var result={};
+      //[{name:'email',value:'用户输入的内容'}]
+   var f= form.serializeArray();
+   f.forEach(function(item){
+       //result.email
+    result[item.name]=item.value;
+   });
+   return result;
+}
+ 
+//为表单添加提交事件
+
+    $('#loginForm').on('submit',function(){
+    //获取表单中用户输入的内容
+    var result=serializeToJson($(this));
+    console.log(result);
+    //如果用户没有输入邮箱地址的话
+    if(result.email.trim().length==0){
+        alert('请输入邮箱');
+            //阻止程序向下执行
+        return false;  
+
+    }
+    //如果用户没有输入密码的话
+    if(result.password.trim().length==0){
+        alert('请输入密码');
+            //阻止程序向下执行
+        return false;  
+    }
+    });
+
+    </script>
+</body>
+
+</html>

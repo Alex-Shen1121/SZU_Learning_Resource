@@ -1,0 +1,101 @@
+{{extend './common/layout.art'}} {{block'main'}}
+<!-- 头部 -->
+{{include './common/header.art'}}
+<!-- /头部 -->
+<!-- 主体内容 -->
+<div class="content">
+    <!-- 侧边栏 -->
+    {{include './common/aside.art'}}
+    <!-- 侧边栏 -->
+    <div class="main">
+        <!-- 分类标题 -->
+        <div class="title">
+            <h4>文章</h4>
+
+            <a href="/admin/article-edit" class="btn btn-primary new">发布新文章</a>
+        </div>
+        <!-- /分类标题 -->
+        <!-- 内容列表 -->
+        <table class="table table-striped table-bordered table-hover custom-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>标题</th>
+                    <th>发布时间</th>
+                    <th>作者</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{each articles}}
+                <tr>
+                    <td>{{@$value._id}}</td>
+                    <td>{{$value.title}}</td>
+                    <td>{{dateFormat($value.publishDate,'yyyy-mm-dd')}}</td>
+                    <td>{{$value.author.username}}</td>
+                    <td>
+                        <a href="/admin/article-edit?id={{@$value._id}}" class="glyphicon glyphicon-edit"></a>
+                        <i class="glyphicon glyphicon-remove delete" data-toggle="modal" data-target=".confirm-modal" data-id="{{@$value._id}}"></i>
+                    </td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+        <!-- /内容列表 -->
+
+        <!-- 分页 -->
+        <ul class="pagination">
+            <li>
+                <a href="#">
+                    <span>&laquo;</span>
+                </a>
+            </li>
+
+
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#">
+                    <span>&raquo;</span>
+                </a>
+            </li>
+        </ul>
+        <!-- /分页 -->
+    </div>
+</div>
+<!-- /主体内容 -->
+<!-- 删除确认弹出框 -->
+<div class="modal fade confirm-modal">
+    <div class="modal-dialog modal-lg">
+        <form class="modal-content" action="/admin/article-delete" method="get">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">请确认</h4>
+            </div>
+            <div class="modal-body">
+                <p>您确定要删除这篇文章吗?</p>
+                <input type="hidden" name="id" id="deleteArticleId"></input>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <input type="submit" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>
+<!-- /删除确认弹出框 -->
+{{/block}} {{block'script'}}
+<script type="text/javascript">
+    $('.delete').on('click', function() {
+        //获取文章id
+        var id = $(this).attr('data-id');
+        //将要删除的文章存储隐藏域中
+        $('#deleteArticleId').val(id);
+        // alert(id);
+    })
+</script>
+{{/block}}

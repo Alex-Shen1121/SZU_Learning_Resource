@@ -1,0 +1,13 @@
+
+//表单提交错误提示页面
+{{extend './common/layout.art'}}
+{{block 'main'}}
+<p class ="bg-danger error">{{msg}}</p>
+{{/block}}
+{{block 'script'}}
+    <script type="text/javascript">
+        setTimeout(function(){
+            location.href='/admin/login';  
+        },2000);    
+    </script>
+{{/block}}

@@ -1,0 +1,22 @@
+<!-- 头部 -->
+    <div class="header">
+    	<!-- 网站标志 -->
+        <div class="logo fl">
+          深圳大学 <i>SZU</i>
+        </div>
+        <!-- /网站标志 -->
+        <!-- 用户信息 -->
+        <div class="info">
+            <div class="profile dropdown fr">
+                <span class="btn dropdown-toggle" data-toggle="dropdown">
+					{{userInfo&&userInfo.username}}
+					<span class="caret"></span>
+                </span>
+                <ul class="dropdown-menu">
+                    <li><a href="/admin/logout">退出登录</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /用户信息 -->
+    </div>
+<!-- /头部 -->

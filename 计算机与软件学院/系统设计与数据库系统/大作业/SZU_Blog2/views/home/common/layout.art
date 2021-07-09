@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/home/css/base.css"> {{block 'link'}}{{/block}}
+</head>
+
+<body>
+
+    {{block 'main'}}{{/block}}
+
+</body>
+ {{block 'script'}}{{/block}}
+</html>

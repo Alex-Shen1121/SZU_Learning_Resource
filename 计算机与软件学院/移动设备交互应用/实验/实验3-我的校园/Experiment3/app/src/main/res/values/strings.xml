@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Experiment3</string>
+    <string-array name="spinnername">
+        <item>重要通知</item>
+        <item>学术讲座</item>
+        <item>深大新闻</item>
+    </string-array>
+</resources>

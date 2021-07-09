@@ -1,0 +1,158 @@
+body, ul, h1, h3, h4, p {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+	font-family: 'Microsoft YaHei', 'Arial';
+	background: #f5f5f5;
+	color: #555;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	transition: all 0.2s;
+}
+
+a:hover {
+	color: #ff7300;
+}
+
+input, textarea {
+	border: 1px solid #ccc;
+	outline: none;
+	color: #555;
+	font-family: inherit;
+}
+
+input {
+	padding: 0;
+}
+
+textarea {
+	padding: 10px;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.pr {
+	position: relative;
+}
+
+.pa {
+	position: absolute;
+}
+
+.layoutItem{
+	padding-bottom:32767px;
+	margin-bottom:-32767px;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
+.w1100 {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+/* 头部框架开始 */
+.header {
+	width: 100%;
+	min-width: 1100px;
+	height: 60px;
+	background: rgb(149, 0, 64);
+}
+
+.header .w1100 {
+	height: 60px;
+}
+/* 头部框架结束 */
+
+/* 网站logo开始 */
+.logo, .logo a, .logo img {
+	width: 175px;
+	height: 60px;
+}
+
+.logo a,
+.logo img {
+	display: block;
+}
+/* 网站logo结束 */
+
+/* 网站导航开始 */
+.navigation {
+	height: 60px;
+}
+
+.navigation li {
+	height: 60px;
+	float: left;
+	margin-left: 14px;
+}
+
+.navigation li a {
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 26px;
+	color: #FFF;
+	font-size: 14px;
+	transition: all 0.4s;
+}
+.navigation li a:hover,
+.navigation li .active {
+	background: #ff7300;
+}
+/* 网站导航结束 */
+
+/* 文章信息开始 */
+.article-info {
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+.article-info span {
+	float: left;
+	padding-right: 6px;
+	margin-right: 6px;
+	position: relative;
+}
+
+.article-info span:not(:last-child):after {
+	content: '';
+	width: 1px;
+	height: 10px;
+	position: absolute;
+	right: 0;
+	top: 3px;
+	background: #3f434c;
+}
+
+.article-info .author {
+	color: #ff7300;
+}
+
+/* 文章信息结束 */
+
+/* 文章标题开始 */
+.article-title {
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+}
+/* 文章标题结束 */

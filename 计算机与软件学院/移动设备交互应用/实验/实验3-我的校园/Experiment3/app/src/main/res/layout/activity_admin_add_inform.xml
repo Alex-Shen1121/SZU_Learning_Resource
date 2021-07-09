@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Admin.AdminMenu">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#6A1A1A"
+        android:src="@drawable/szu_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3D1D1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/userIdentity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/ForceOffline1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_200"
+                android:text="强制下线" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E3D1D1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/columnTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="修改栏目："
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/blank3"
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:visibility="invisible" />
+
+            <Spinner
+                android:id="@+id/informType"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/dateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E3C1C1"
+                android:hint="日期：xxxx/xx/xx"
+                android:inputType="date"
+                android:singleLine="true"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/blank2"
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/informTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E3C1C1"
+                android:hint="请输入标题："
+                android:singleLine="true"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/blank"
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E3C1C1"
+                android:hint="请输入地点："
+                android:singleLine="true"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/submitInform"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:text="提交" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

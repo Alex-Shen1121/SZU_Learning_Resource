@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.3" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="ak's_assets_0" tilewidth="32" tileheight="32" tilecount="504" columns="24">
+  <image source="ak's_assets_0.png" width="768" height="672"/>
+ </tileset>
+ <layer id="1" name="mainLayer" width="32" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzFldkNwjAMhptHjiVgCw6VETg7BPAETAA8ARMAT8AUwBTAJBwD8FeoUpvaiaNWwtInOW7iP4eTel7SOn/CZFyfvPLaxnF52hYdW37dp8bb8km+cTm5uVDtKBYoz6uAqkr3nyA2BTNF6wcqrUet33YONeSpE/orxNZgQ+hze2+qEU6/i/w9Qv+A2BGcGH1uPtK6i7cDQv+M2AVcDfoud8S1/m7QvYOHYP1UPpu+6bt072w1nkW/gXU3QUuw/5SfVb8P3YFAPx5zfX9M+r76IdGX3n/TO6fnl9wll/XnadLz594FCS7z0PXjFr4t+pjwXIdgBMaa7xNvkWR+pv2nxs6hswBLlfSp/k/wAm/wYfLZ9KN6jmwLfwf2KulHNR+nAIqgBMrM/zDLWefFFyIkdT0=
+  </data>
+ </layer>
+</map>

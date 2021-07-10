@@ -1,0 +1,20 @@
+
+i=1;
+for i=1:2
+    clear temp_image;
+    clear s;
+    s = ['image\',num2str(i) ,'.jpg']
+    temp_image = imread(s);
+    Istatxture(:,i)=lbp(temp_image);
+    IcolorMom(:,i)=double(temp_image(:,:,:,1));
+end
+%save statxture Istatxture;
+%save colorMom IcolorMom;
+%a1=Istatxture(:,:,:,1)
+%a2=Istatxture(:,:,:,100)
+
+%X = [a1 ; a2];
+%D = pdist(X,'euclidean')
+%IcolorMom(:,:,:,100)
+
+

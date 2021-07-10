@@ -1,0 +1,22 @@
+S = load('statxture.mat');
+C = load('colorMom.mat');
+StatxtureData = S.Istatxture;
+ColorData = C.IcolorMom;
+StatxtureData(:,1)
+ColorData(:,1)
+
+i = 1;
+order = zeros(1,100);
+for i=1:100
+    order(1,i)=CalDis(ColorData(:,1),ColorData(:,i));
+end
+[sA,index] = sort(order) ;
+
+i = 1;
+for m=1:6
+    for n=1:6
+     I=imread(['image\',num2str(inddex(i)) ,'.jpg']);
+     subplot(m,n,p);
+     imshow(I);
+    end
+end

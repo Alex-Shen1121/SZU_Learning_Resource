@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<UIProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <filePath>I:\大二下\计算机游戏开发\作业\第2次作业 绘制交互界面\帮助界面\帮助界面.xml.ui</filePath>
+  <Version>1.2.0.0</Version>
+  <Name>帮助界面</Name>
+  <ProjectDir>I:\大二下\计算机游戏开发\作业\第2次作业 绘制交互界面\帮助界面</ProjectDir>
+  <JsonFileName>帮助界面.json</JsonFileName>
+  <Resources>I:\大二下\计算机游戏开发\作业\第2次作业 绘制交互界面\帮助界面\Resources</Resources>
+  <JsonFolder>I:\大二下\计算机游戏开发\作业\第2次作业 绘制交互界面\帮助界面\Json</JsonFolder>
+  <JsonList>
+    <string>帮助界面_1.json</string>
+  </JsonList>
+  <imageFileList>
+    <string>帮助界面0.plist</string>
+  </imageFileList>
+  <JsonSuffix>.json</JsonSuffix>
+  <CurrentUIJson />
+  <CanvasSize>
+    <Width>1024</Width>
+    <Height>768</Height>
+  </CanvasSize>
+</UIProject>

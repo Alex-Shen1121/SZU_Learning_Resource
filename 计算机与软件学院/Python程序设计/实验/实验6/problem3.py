@@ -1,0 +1,5 @@
+print(list(map(int, ['12', '-2', '0'])))
+print(list(map(len, ['hello', 'world'])))
+print(list(map(lambda s: s[::-1], ['hello', 'world'])))
+print(list(map(lambda x: (x, x**2, x**3), range(2, 6))))
+print(list(map(lambda x: x[0]*x[1], zip(range(2, 5), range(3, 9, 2)))))

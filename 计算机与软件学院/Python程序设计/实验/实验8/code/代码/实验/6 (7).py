@@ -1,0 +1,5 @@
+it = iter(range(100))
+print(67 in it)
+print(next(it))
+print(37 in it)
+print(next(it))

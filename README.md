@@ -8,7 +8,7 @@
 </div>
 个人CSDN主页：[Alex_SCY的博客](https://blog.csdn.net/pigpigpig64?spm=1001.2014.3001.5343)
 
-个人博客主页：[Alex's Blog](https://www.codingshen.com)
+个人博客主页：[Alex's Blog](http://www.codingshen.com)
 
 
 

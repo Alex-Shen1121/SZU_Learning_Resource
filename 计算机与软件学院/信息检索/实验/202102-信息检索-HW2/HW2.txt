@@ -1,0 +1,60 @@
+Adaptive Pairwise Preference Learning for Collaborative Recommendation with Implicit Feedbacks
+HGMF: Hierarchical Group Matrix Factorization for Collaborative Recommendation
+Adaptive Bayesian Personalized Ranking for Heterogeneous Implicit Feedbacks
+Compressed Knowledge Transfer via Factorization Machine for Heterogeneous Collaborative Recommendation
+A Survey of Transfer Learning for Collaborative Recommendation with Auxiliary Data
+Mixed Factorization for Collaborative Recommendation with Heterogeneous Explicit Feedbacks
+Transfer Learning for Heterogeneous One-Class Collaborative Filtering
+Group Bayesian Personalized Ranking with Rich Interactions for One-Class Collaborative Filtering
+Transfer Learning for Semi-Supervised Collaborative Recommendation
+Transfer Learning for Behavior Prediction
+TOCCF: Time-Aware One-Class Collaborative Filtering
+RBPR: Role-based Bayesian Personalized Ranking for Heterogeneous One-Class Collaborative Filtering
+Hybrid One-Class Collaborative Filtering for Job Recommendation
+Mixed Similarity Learning for Recommendation with Implicit Feedback
+Collaborative Recommendation with Multiclass Preference Context
+Transfer Learning for Behavior Ranking
+Transfer Learning from APP Domain to News Domain for Dual Cold-Start Recommendation
+k-CoFi: Modeling k-Granularity Preference Context in Collaborative Filtering
+CoFi-points: Collaborative Filtering via Pointwise Preference Learning over Item-Sets
+Personalized Recommendation with Implicit Feedback via Learning Pairwise Preferences over Item-sets
+BIS: Bidirectional Item Similarity for Next-Item Recommendation
+RLT: Residual-Loop Training in Collaborative Filtering for Combining Factorization and Global-Local Neighborhood
+MF-DMPC: Matrix Factorization with Dual Multiclass Preference Context for Rating Prediction
+Transfer to Rank for Heterogeneous One-Class Collaborative Filtering
+Neighborhood-Enhanced Transfer Learning for One-Class Collaborative Filtering
+Next-Item Recommendation via Collaborative Filtering with Bidirectional Item Similarity
+Asymmetric Bayesian Personalized Ranking for One-Class Collaborative Filtering
+Context-aware Collaborative Ranking
+Transfer to Rank for Top-N Recommendation
+Dual Similarity Learning for Heterogeneous One-Class Collaborative Filtering
+Sequence-Aware Factored Mixed Similarity Model for Next-Item Recommendation
+PAT: Preference-Aware Transfer Learning for Recommendation with Heterogeneous Feedback
+Adaptive Transfer Learning for Heterogeneous One-Class Collaborative Filtering
+A General Knowledge Distillation Framework for Counterfactual Recommendation via Uniform Data
+FISSA: Fusing Item Similarity Models with Self-Attention Networks for Sequential Recommendation
+Asymmetric Pairwise Preference Learning for Heterogeneous One-Class Collaborative Filtering
+k-Reciprocal Nearest Neighbors Algorithm for One-Class Collaborative Filtering
+CoFiGAN: Collaborative Filtering by Generative and Discriminative Training for One-Class Recommendation
+Conditional Restricted Boltzmann Machine for Item Recommendation
+Matrix Factorization with Heterogeneous Multiclass Preference Context
+CoFi-points: Collaborative Filtering via Pointwise Preference Learning on User/Item-Set
+A Survey on Heterogeneous One-Class Collaborative Filtering
+Holistic Transfer to Rank for Top-N Recommendation
+FedRec: Federated Recommendation with Explicit Feedback
+Factored Heterogeneous Similarity Model for Recommendation with Implicit Feedback
+FCMF: Federated Collective Matrix Factorization for Heterogeneous Collaborative Filtering
+Sequence-Aware Similarity Learning for Next-Item Recommendation
+FR-FMSS: Federated Recommendation via Fake Marks and Secret Sharing
+Transfer Learning in Collaborative Recommendation for Bias Reduction
+Mitigating Confounding Bias in Recommendation via Information Bottleneck
+FedRec++: Lossless Federated Recommendation with Explicit Feedback
+VAE++: Variational AutoEncoder for Heterogeneous One-Class Collaborative Filtering
+TransRec++: Translation-based Sequential Recommendation with Heterogeneous Feedback
+Collaborative filtering with implicit feedback via learning pairwise preferences over user-groups and item-sets
+Interaction-Rich Transfer Learning for Collaborative Filtering with Heterogeneous User Feedback
+Transfer Learning in Heterogeneous Collaborative Filtering Domains
+GBPR: Group Preference based Bayesian Personalized Ranking for One-Class Collaborative Filtering
+CoFiSet: Collaborative Filtering via Learning Pairwise Preferences over Item-sets
+Modeling Item Category for Effective Recommendation
+Position-Aware Context Attention for Session-Based Recommendation

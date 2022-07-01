@@ -1,0 +1,448 @@
+A/B 测试
+A/B testing
+准确率
+accuracy
+激活函数
+activation function
+AdaGrad
+ROC 曲线下面积
+AUC
+Area under the ROC Curve
+反向传播算法
+backpropagation
+基准
+baseline
+批次
+batch
+批次大小
+batch size
+偏差
+bias
+二元分类
+binary classification
+分箱
+binning
+分桶
+bucketing
+校准层
+calibration layer
+候选采样
+candidate sampling
+分类数据
+categorical data
+形心
+centroid
+检查点
+checkpoint
+类别
+class
+分类不平衡的数据集
+class-imbalanced data set
+分类模型
+classification model
+分类阈值
+classification threshold
+聚类
+clustering
+协同过滤
+collaborative filtering
+混淆矩阵
+confusion matrix
+连续特征
+continuous feature
+收敛
+convergence
+凸函数
+convex function
+凸优化
+convex optimization
+凸集
+convex set
+卷积
+convolution
+卷积过滤器
+convolutional filter
+卷积层
+convolutional layer
+卷积神经网络
+convolutional neural network
+卷积运算
+convolutional operation
+成本
+cost
+交叉熵
+cross-entropy
+自定义 Estimator
+custom Estimator
+数据分析
+data analysis
+DataFrame
+数据集
+data set
+Dataset API
+tf.data
+决策边界
+decision boundary
+密集层
+dense layer
+深度模型
+deep model
+密集特征
+dense feature
+设备
+device
+离散特征
+discrete feature
+丢弃正则化
+dropout regularization
+动态模型
+dynamic model
+早停法
+early stopping
+嵌套
+embeddings
+经验风险最小化
+ERM
+empirical risk minimization
+集成学习
+ensemble
+周期
+epoch
+Estimator
+样本
+example
+假负例
+FN
+false negative
+假正例
+FP
+false positive
+假正例率
+false positive rate
+FP率
+特征
+feature
+特征列
+tf.feature_column
+特征组合
+feature cross
+特征工程
+feature engineering
+特征集
+feature set
+特征规范
+feature spec
+少量样本学习
+few-shot learning
+完整 softmax
+full softmax
+全连接层
+fully connected layer
+泛化
+generalization
+广义线性模型
+generalized linear model
+梯度
+gradient
+梯度裁剪
+gradient clipping
+梯度下降法
+gradient descent
+图
+graph
+启发法
+heuristic
+隐藏层
+hidden layer
+合页损失函数
+hinge loss
+维持数据
+holdout data
+超参数
+hyperparameter
+超平面
+hyperplane
+独立同等分布
+i.i.d
+independently and identically distributed
+推断
+inference
+输入函数
+input function
+输入层
+input layer
+实例
+instance
+可解释性
+interpretability
+评分者间一致性信度
+inter-rater agreement
+迭代
+iteration
+k-means
+k-median
+Keras
+核支持向量机
+KSVM
+Kernel Support Vector Machines
+L1 损失函数
+L₁ loss
+L1 正则化
+L₁ regularization
+L2 损失函数
+L₂ loss
+L2 正则化
+L₂ regularization
+标签
+label
+有标签样本
+labeled example
+lambda
+层
+layer
+Layers API
+tf.layers
+学习速率
+learning rate
+最小二乘回归
+least squares regression
+线性回归
+linear regression
+逻辑回归
+logistic regression
+对数
+logits
+对数损失函数
+Log Loss
+对数几率
+log-odds
+损失
+Loss
+机器学习
+machine learning
+均方误差
+MSE
+Mean Squared Error
+指标
+metric
+Metrics API
+tf.metrics
+小批次
+mini-batch
+小批次随机梯度下降法
+SGD
+mini-batch stochastic gradient descent
+ML
+模型
+model
+模型函数
+model function
+模型训练
+model training
+动量
+Momentum
+多类别分类
+multi-class classification
+多项分类
+multinomial classification
+NaN 陷阱
+NaN trap
+负类别
+negative class
+神经网络
+neural network
+神经元
+neuron
+节点
+node
+标准化
+normalization
+数值数据
+numerical data
+Numpy
+目标
+objective
+离线推断
+offline inference
+独热编码
+one-hot encoding
+单样本学习（one-shot learning，通常用于对象分类）
+一对多
+one-vs.-all
+在线推断
+online inference
+操作
+op
+Operation
+优化器
+optimizer
+离群值
+outlier
+输出层
+output layer
+过拟合
+overfitting
+Pandas
+参数
+parameter
+参数服务器
+PS
+Parameter Server
+参数更新
+parameter update
+偏导数
+partial derivative
+划分策略
+partitioning strategy
+性能
+performance
+困惑度
+perplexity
+流水线
+pipeline
+池化
+pooling
+正类别
+positive class
+精确率
+precision
+预测
+prediction
+预测偏差
+prediction bias
+预创建的 Estimator
+pre-made Estimator
+预训练模型
+pre-trained model
+先验信念
+prior belief
+队列
+queue
+等级
+rank
+评分者
+rater
+召回率
+recall
+修正线性单元
+ReLU
+Rectified Linear Unit
+回归模型
+regression model
+正则化
+regularization
+正则化率
+regularization rate
+表示法
+representation
+受试者工作特征曲线（receiver operating characteristic，简称 ROC 曲线）
+根目录
+root directory
+均方根误差
+RMSE
+Root Mean Squared Error
+旋转不变性
+rotational invariance
+SavedModel
+Saver
+缩放
+scaling
+scikit-learn
+半监督式学习
+semi-supervised learning
+序列模型
+sequence model
+会话
+tf.session
+S 型函数
+sigmoid function
+大小不变性
+size invariance
+softmax
+稀疏特征
+sparse feature
+稀疏表示法
+sparse representation
+稀疏性
+sparsity
+空间池化
+spatial pooling
+平方合页损失函数
+squared hinge loss
+平方损失函数
+squared loss
+静态模型
+static model
+平稳性
+stationarity
+步
+step
+步长
+step size
+随机梯度下降法
+SGD
+stochastic gradient descent
+结构风险最小化
+SRM
+structural risk minimization
+步长
+stride
+下采样
+subsampling
+总结
+summary
+监督式机器学习
+supervised machine learning
+合成特征
+synthetic feature
+目标
+target
+时态数据
+temporal data
+张量
+Tensor
+张量处理单元
+TPU
+Tensor Processing Unit
+张量等级
+Tensor rank
+张量形状
+Tensor shape
+张量大小
+Tensor size
+TensorBoard
+TensorFlow
+TensorFlow Playground
+TensorFlow Serving
+测试集
+test set
+tf.Example
+时间序列分析
+time series analysis
+训练
+training
+训练集
+training set
+迁移学习
+transfer learning
+平移不变性
+translational invariance
+负例
+TN
+true negative
+正例
+TP
+true positive
+正例率
+true positive rate
+TP 率
+无标签样本
+unlabeled example
+非监督式机器学习
+unsupervised machine learning
+验证集
+validation set
+权重
+weight
+宽度模型
+wide model

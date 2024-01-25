@@ -8,7 +8,7 @@
 </div>
 个人CSDN主页：[Alex_SCY的博客](https://blog.csdn.net/pigpigpig64?spm=1001.2014.3001.5343)
 
-个人博客主页：[Alex's Blog](http://www.codingshen.com)
+个人博客主页：[Alex's Blog](http://blog.codingshen.top)
 
 本仓库记录了一些个人在深圳大学计算机系的本科学习资料。
 
@@ -32,5 +32,5 @@
 | [多媒体系统导论](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2/%E5%A4%9A%E5%AA%92%E4%BD%93%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA) |[机器学习导论](https://github.com/Alex-Shen1121/SZU_Learning_Resource/tree/main/计算机与软件学院/机器学习导论)|||
 
 
-如果你认为本仓库的一些文件侵犯了您的权益，请联系作者2019092121@email.szu.edu.cn。我们将会从仓库中彻底清除这些文件。
+如果你认为本仓库的一些文件侵犯了您的权益，请联系作者alex_shency@outlook.com。我们将会从仓库中彻底清除这些文件。
 
